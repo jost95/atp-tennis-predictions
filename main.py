@@ -1,6 +1,6 @@
 import pandas as pd
 from utilities import calc_stats
-from utilities import gen_train
+from utilities import gen_data
 
 # Base weight for matches
 base_weight = 10
@@ -14,7 +14,7 @@ if generate_statistics:
     calc_stats.calc_stats(base_weight, from_stats_year, to_stats_year)
 
 # Training phase
-from_train_year = to_stats_year + 1
-to_train_year = 2018
-gen_train.gen_train(base_weight, from_train_year, to_train_year)
+from_data_year = to_stats_year + 1
+to_data_year = 2019
+gen_data.gen_data(base_weight, from_data_year, to_data_year)
 
