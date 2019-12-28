@@ -1,4 +1,5 @@
 # This script calculates weighted win and game difference matrices
+import time
 
 import pandas as pd
 import numpy as np
@@ -6,7 +7,6 @@ import datetime
 
 
 def extract_player_ids(from_year, to_year):
-    print('Loading players...')
     # Extract players from correct matches (future ones)
     matches = []
 
@@ -22,12 +22,13 @@ def extract_player_ids(from_year, to_year):
     loser_ids = matches.loser_id.to_numpy()
 
     # Filter out unique players
-    print('Players loaded')
-    return np.unique(np.append(winner_ids, loser_ids))
+    players = np.unique(np.append(winner_ids, loser_ids))
+
+    print('Players loaded, number of players:', len(players))
+    return players
 
 
 def load_matches(from_year, to_year, player_ids=None):
-    print('Loading matches...')
     matches = []
 
     for year in range(from_year, to_year + 1):
@@ -92,7 +93,8 @@ def print_progress(i, no_matches):
 
 
 def generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_year, from_data_year, to_data_year):
-    print('GENERATING MATCH STATISTICS')
+    print('----- GENERATING MATCH STATISTICS -----')
+    start_time = time.time()
 
     # Load players
     player_ids = extract_player_ids(from_data_year, to_data_year)
@@ -106,13 +108,13 @@ def generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_
     mutual_matches_clay = pd.DataFrame(base_matrix, player_ids, player_ids)
     mutual_matches_grass = pd.DataFrame(base_matrix, player_ids, player_ids)
     mutual_matches_hard = pd.DataFrame(base_matrix, player_ids, player_ids)
-    mutual_games = pd.DataFrame(base_matrix, player_ids, player_ids)
+    mutual_score = pd.DataFrame(base_matrix, player_ids, player_ids)
 
     # Create general perfomance matrix
     # TODO: implement season and climate with lookup table
-    cond_cat = ['total_won', 'total_lost', 'surface_clay_won', 'surface_clay_lost', 'surface_grass_won',
-                'surface_grass_lost', 'surface_hard_won', 'surface_hard_lost', 'surface_carpet_won',
-                'surface_carpet_lost']
+    cond_cat = ['total_wins', 'total_losses', 'surface_clay_wins', 'surface_clay_losses', 'surface_grass_wins',
+                'surface_grass_losses', 'surface_hard_wins', 'surface_hard_losses', 'surface_carpet_wins',
+                'surface_carpet_losses']
     cond_stats = np.zeros((no_players, len(cond_cat)), dtype=np.int64)
     cond_stats = pd.DataFrame(cond_stats, player_ids, cond_cat)
 
@@ -120,13 +122,10 @@ def generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_
     i = 0
     no_matches = len(matches)
 
+    print('Generating match statistics...')
+
     # Loop is unavoidable...
     for match in matches.itertuples():
-        i += 1
-
-        if i % 1000 == 0:
-            print_progress(i, no_matches)
-
         winner_id = match.winner_id
         loser_id = match.loser_id
         time_weight = get_time_weight(to_stats_year, match.tourney_date)
@@ -142,14 +141,14 @@ def generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_
 
         # Winner stats
         if winner_id in player_ids:
-            cond_stats['total_won'][winner_id] += match_dt_weight
-            cond_stats['surface_' + surface + '_won'][winner_id] += match_d_weight
+            cond_stats['total_wins'][winner_id] += match_dt_weight
+            cond_stats['surface_' + surface + '_wins'][winner_id] += match_d_weight
             winner_in_ids = True
 
         # Loser stats
         if loser_id in player_ids:
-            cond_stats['total_lost'][loser_id] += match_dt_weight
-            cond_stats['surface_' + surface + '_lost'][loser_id] += match_d_weight
+            cond_stats['total_losses'][loser_id] += match_dt_weight
+            cond_stats['surface_' + surface + '_losses'][loser_id] += match_d_weight
             loser_in_ids = True
 
         # Mutual statistics
@@ -167,17 +166,26 @@ def generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_
             except ValueError:
                 continue
 
-            mutual_games[winner_id][loser_id] += round(base_weight * time_weight * winner_games)
-            mutual_games[loser_id][winner_id] += round(base_weight * time_weight * loser_games)
+            mutual_score[winner_id][loser_id] += round(base_weight * time_weight * winner_games)
+            mutual_score[loser_id][winner_id] += round(base_weight * time_weight * loser_games)
 
-    print(no_matches, 'matches (100%) processed')
+        # Update counter
+        i += 1
+        if i % 10000 == 0:
+            print_progress(i, no_matches)
+
+    print('All', no_matches, 'matches (100%) processed')
 
     # To avoid running script every training phase
     filename = 'input/fixed/match_statistics.h5'
     mutual_matches_clay.to_hdf(filename, key='mm_clay', mode='w')
     mutual_matches_grass.to_hdf(filename, key='mm_grass')
     mutual_matches_hard.to_hdf(filename, key='mm_hard')
-    mutual_games.to_hdf(filename, key='mg')
+    mutual_score.to_hdf(filename, key='ms')
     cond_stats.to_hdf(filename, key='cs')
 
-    print('Statistics saved')
+    print('H5 statistics file saved')
+
+    end_time = time.time()
+    time_diff = round(end_time - start_time)
+    print('----- MATCH STATISTICS COMPLETED, EXEC TIME:', time_diff, 'SECONDS ----- \n')

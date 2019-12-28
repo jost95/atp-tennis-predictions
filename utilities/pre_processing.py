@@ -1,4 +1,6 @@
 import datetime
+import time
+
 import pandas as pd
 import numpy as np
 from typing import Dict
@@ -6,57 +8,57 @@ from utilities.statistics import get_score, load_matches, print_progress, get_ti
 
 
 def load_rankings():
-    print('Loading rankings...')
     rankings_10s = pd.read_csv('input/raw/atp_rankings_10s.csv', parse_dates=['ranking_date'])
     rankings_current = pd.read_csv('input/raw/atp_rankings_current.csv', parse_dates=['ranking_date'])
     rankings = pd.concat([rankings_10s, rankings_current], sort=False)
 
     # Sort by date (oldest ranking first)
     rankings.sort_values(by=['ranking_date'], inplace=True, ascending=True)
+
     print('Rankings loaded')
     return rankings
 
 
 def get_relative_surface_wins(cond_stats, winner_id, loser_id, surface):
-    winner_surface_won = cond_stats['surface_' + surface + '_won'][winner_id]
-    winner_surface_lost = cond_stats['surface_' + surface + '_lost'][winner_id]
-    winner_surface_played = winner_surface_won + winner_surface_lost
-    loser_surface_won = cond_stats['surface_' + surface + '_won'][loser_id]
-    loser_surface_lost = cond_stats['surface_' + surface + '_lost'][loser_id]
-    loser_surface_played = loser_surface_won + loser_surface_lost
+    surface_wins_winner = cond_stats['surface_' + surface + '_wins'][winner_id]
+    surface_losses_winner = cond_stats['surface_' + surface + '_losses'][winner_id]
+    surface_played_winner = surface_wins_winner + surface_losses_winner
+    surface_wins_loser = cond_stats['surface_' + surface + '_wins'][loser_id]
+    surface_losses_loser = cond_stats['surface_' + surface + '_losses'][loser_id]
+    surface_played_loser = surface_wins_loser + surface_losses_loser
 
-    if winner_surface_played == 0:
-        winner_rel_surface_won = 0
+    if surface_played_winner == 0:
+        rel_surface_wins_winner = 0
     else:
-        winner_rel_surface_won = float(winner_surface_won) / winner_surface_played
+        rel_surface_wins_winner = float(surface_wins_winner) / surface_played_winner
 
-    if loser_surface_played == 0:
-        loser_rel_surface_won = 0
+    if surface_played_loser == 0:
+        rel_surface_wins_loser = 0
     else:
-        loser_rel_surface_won = float(loser_surface_won) / loser_surface_played
+        rel_surface_wins_loser = float(surface_wins_loser) / surface_played_loser
 
-    return winner_rel_surface_won - loser_rel_surface_won
+    return rel_surface_wins_winner - rel_surface_wins_loser
 
 
 def get_relative_total_wins(cond_stats, winner_id, loser_id):
-    winner_total_won = cond_stats['total_won'][winner_id]
-    winner_total_lost = cond_stats['total_lost'][winner_id]
-    winner_total_played = winner_total_won + winner_total_lost
-    loser_total_won = cond_stats['total_won'][loser_id]
-    loser_total_lost = cond_stats['total_lost'][loser_id]
-    loser_total_played = loser_total_won + loser_total_lost
+    total_wins_winner = cond_stats['total_wins'][winner_id]
+    total_losses_winner = cond_stats['total_losses'][winner_id]
+    total_played_winner = total_wins_winner + total_losses_winner
+    total_wins_loser = cond_stats['total_wins'][loser_id]
+    total_losses_loser = cond_stats['total_losses'][loser_id]
+    total_played_loser = total_wins_loser + total_losses_loser
 
-    if winner_total_played == 0:
-        winner_rel_total_won = 0
+    if total_played_winner == 0:
+        rel_total_wins_winner = 0
     else:
-        winner_rel_total_won = float(winner_total_won) / winner_total_played
+        rel_total_wins_winner = float(total_wins_winner) / total_played_winner
 
-    if loser_total_played == 0:
-        loser_rel_total_won = 0
+    if total_played_loser == 0:
+        rel_total_wins_loser = 0
     else:
-        loser_rel_total_won = float(loser_total_won) / loser_total_played
+        rel_total_wins_loser = float(total_wins_loser) / total_played_loser
 
-    return winner_rel_total_won - loser_rel_total_won
+    return rel_total_wins_winner - rel_total_wins_loser
 
 
 def get_mutual_surface_wins(mm_clay, mm_grass, mm_hard, surface, winner_id,
@@ -123,17 +125,17 @@ def get_rankings(rankings, winner_id, loser_id, tourney_date):
 
 # noinspection PyTypeChecker
 def generate_data(t_weights, base_weight, from_data_year, to_data_year):
-    print('PRE-PROCESSING MATCHES')
+    print('----- GENERATING PRE-PROCESSED MATCHES -----')
+    start_time = time.time()
 
-    print('Loading statistics...')
     filename = 'input/fixed/match_statistics.h5'
     mutual_matches_clay = pd.read_hdf(filename, key='mm_clay')
     mutual_matches_grass = pd.read_hdf(filename, key='mm_grass')
     mutual_matches_hard = pd.read_hdf(filename, key='mm_hard')
     mutual_matches = mutual_matches_clay + mutual_matches_grass + mutual_matches_hard
-    mutual_games = pd.read_hdf(filename, key='mg')
+    mutual_score = pd.read_hdf(filename, key='ms')
     cond_stats = pd.read_hdf(filename, key='cs')
-    print('Statistics loaded')
+    print('Generated statistics loaded')
 
     # Load rankings
     rankings = load_rankings()
@@ -144,57 +146,54 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
 
     # TODO: implement home advantage, season and climate, need lookup table
     # TODO: implement very recent performance, last month + tournament
-    data_columns = ['rel_total_won', 'rel_surface_won', 'mutual_won', 'mutual_surface_won', 'mutual_game', 'rank_diff',
-                    'points_grad_diff', 'outcome']
+    data_columns = ['rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins', 'mutual_score',
+                    'rank_diff', 'points_grad_diff', 'outcome']
     matches = np.zeros((len(raw_matches), len(data_columns)), dtype=np.int64)
     matches = pd.DataFrame(matches, columns=data_columns)
 
     i = 0
     no_matches = len(raw_matches)
 
+    print('Pre-processing matches...')
+
     # Generate training matrix and update statistics matrices
+    # Loop unavoidable
     for raw_match in raw_matches.itertuples():
-        i += 1
-
-        if i % 1000 == 0:
-            print_progress(i, no_matches)
-
         match = matches.iloc[i].copy()
         winner_id = raw_match.winner_id
         loser_id = raw_match.loser_id
         tourney_date = raw_match.tourney_date
         time_weight = get_time_weight(from_data_year, tourney_date, sign=-1)
-
         surface = get_surface(raw_match.surface)
 
-        # 1. Relative total won raw_matches differences
+        # 1. Relative total win raw_matches differences
         rel_total_wins = get_relative_total_wins(cond_stats, winner_id, loser_id)
-        match['rel_total_won'] = round(base_weight * rel_total_wins)
+        match.rel_total_wins = round(base_weight * rel_total_wins)
 
-        # 2. Relative surface won differences
+        # 2. Relative surface win differences
         rel_surface_wins = get_relative_surface_wins(cond_stats, winner_id, loser_id, surface)
-        match['rel_surface_won'] = round(base_weight * rel_surface_wins)
+        match.rel_surface_wins = round(base_weight * rel_surface_wins)
 
         # 3. Mutual wins
-        mutual_won = mutual_matches[winner_id][loser_id] - mutual_matches[loser_id][winner_id]
-        match['mutual_won'] = mutual_won
+        mutual_wins = mutual_matches[winner_id][loser_id] - mutual_matches[loser_id][winner_id]
+        match.mutual_wins = mutual_wins
 
         # 4. Mutual surface wins
         mutual_surface_wins = get_mutual_surface_wins(mutual_matches_clay, mutual_matches_grass, mutual_matches_hard,
                                                       surface, winner_id, loser_id)
-        match['mutual_surface_won'] = mutual_surface_wins
+        match.mutual_surface_wins = mutual_surface_wins
 
         # 4. Mutual game
-        mutual_game = mutual_games[winner_id][loser_id] - mutual_games[loser_id][winner_id]
-        match['mutual_game'] = mutual_game
+        mutual_games = mutual_score[winner_id][loser_id] - mutual_score[loser_id][winner_id]
+        match.mutual_games = mutual_games
 
         # 5. Rank diff
         rank_diff, points_grad_diff = get_rankings(rankings, winner_id, loser_id, tourney_date)
-        match['rank_diff'] = rank_diff
-        match['points_grad_diff'] = points_grad_diff
+        match.rank_diff = rank_diff
+        match.points_grad_diff = points_grad_diff
 
         # 6. Winner is always winner
-        match['outcome'] = 1
+        match.outcome = 1
 
         # Create a balanced set with equal outcomes
         if i % 2 == 0:
@@ -207,10 +206,10 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
         match_d_weight = round(base_weight * time_weight)
         match_dt_weight = round(base_weight * time_weight * t_weights[raw_match.tourney_level])
 
-        cond_stats['total_won'][winner_id] += match_dt_weight
-        cond_stats['surface_' + surface + '_won'][winner_id] += match_d_weight
-        cond_stats['total_lost'][loser_id] += match_dt_weight
-        cond_stats['surface_' + surface + '_lost'][loser_id] += match_d_weight
+        cond_stats['total_wins'][winner_id] += match_dt_weight
+        cond_stats['surface_' + surface + '_wins'][winner_id] += match_d_weight
+        cond_stats['total_losses'][loser_id] += match_dt_weight
+        cond_stats['surface_' + surface + '_losses'][loser_id] += match_d_weight
 
         # Update mutual stats
         mutual_matches[winner_id][loser_id] += match_d_weight
@@ -223,13 +222,25 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
         else:
             mutual_matches_hard[winner_id][loser_id] += match_d_weight
 
-        winner_games, loser_games = get_score(raw_match.score)
+        try:
+            winner_games, loser_games = get_score(raw_match.score)
+        except ValueError:
+            continue
 
-        mutual_games[winner_id][loser_id] += round(base_weight * time_weight * winner_games)
-        mutual_games[loser_id][winner_id] += round(base_weight * time_weight * loser_games)
+        mutual_score[winner_id][loser_id] += round(base_weight * time_weight * winner_games)
+        mutual_score[loser_id][winner_id] += round(base_weight * time_weight * loser_games)
 
-    print(no_matches, 'matches (100%) processed')
+        # Update counter
+        i += 1
+        if i % 10000 == 0:
+            print_progress(i, no_matches)
 
-    matches.to_hd5('input/fixed/processed_matches.csv')
+    print('All', no_matches, 'matches (100%) processed')
 
-    print('Pre-processed data saved')
+    matches.to_hd5('input/fixed/processed_matches.h5', key='matches', mode='w')
+
+    print('Pre-processed H5 matches saved')
+
+    end_time = time.time()
+    time_diff = round(end_time - start_time)
+    print('----- PRE-PROCESS COMPLETED, EXEC TIME:', time_diff, 'SECONDS ----- \n')
