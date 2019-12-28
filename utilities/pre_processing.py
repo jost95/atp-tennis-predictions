@@ -146,7 +146,7 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
 
     # TODO: implement home advantage, season and climate, need lookup table
     # TODO: implement very recent performance, last month + tournament
-    data_columns = ['rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins', 'mutual_score',
+    data_columns = ['date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins', 'mutual_score',
                     'rank_diff', 'points_grad_diff', 'outcome']
     matches = np.zeros((len(raw_matches), len(data_columns)), dtype=np.int64)
     matches = pd.DataFrame(matches, columns=data_columns)
@@ -165,6 +165,9 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
         tourney_date = raw_match.tourney_date
         time_weight = get_time_weight(from_data_year, tourney_date, sign=-1)
         surface = get_surface(raw_match.surface)
+
+        # 0. Set date
+        match.date = tourney_date
 
         # 1. Relative total win raw_matches differences
         rel_total_wins = get_relative_total_wins(cond_stats, winner_id, loser_id)
