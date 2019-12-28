@@ -15,9 +15,9 @@ t_weights = {'S': 0.125, 'C': 0.25, 'A': 0.5, 'M': 0.75, 'D': 0.75, 'G': 1, 'F':
 
 # Select years (including specified year)
 from_stats_year = 2010
-to_stats_year = 2010
+to_stats_year = 2014
 from_data_year = to_stats_year + 1
-to_data_year = 2011
+to_data_year = 2019
 
 generate_statistics = True
 

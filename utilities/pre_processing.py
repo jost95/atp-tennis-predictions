@@ -237,7 +237,7 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
 
     print('All', no_matches, 'matches (100%) processed')
 
-    matches.to_hd5('input/generated/processed_matches.h5', key='matches', mode='w')
+    matches.to_hdf('input/generated/processed_matches.h5', key='matches', mode='w')
 
     print('Pre-processed H5 matches saved')
 
