@@ -177,7 +177,7 @@ def generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_
     print('All', no_matches, 'matches (100%) processed')
 
     # To avoid running script every training phase
-    filename = 'input/fixed/match_statistics.h5'
+    filename = 'input/generated/match_statistics.h5'
     mutual_matches_clay.to_hdf(filename, key='mm_clay', mode='w')
     mutual_matches_grass.to_hdf(filename, key='mm_grass')
     mutual_matches_hard.to_hdf(filename, key='mm_hard')

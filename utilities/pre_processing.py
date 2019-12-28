@@ -128,7 +128,7 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
     print('----- GENERATING PRE-PROCESSED MATCHES -----')
     start_time = time.time()
 
-    filename = 'input/fixed/match_statistics.h5'
+    filename = 'input/generated/match_statistics.h5'
     mutual_matches_clay = pd.read_hdf(filename, key='mm_clay')
     mutual_matches_grass = pd.read_hdf(filename, key='mm_grass')
     mutual_matches_hard = pd.read_hdf(filename, key='mm_hard')
@@ -237,7 +237,7 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
 
     print('All', no_matches, 'matches (100%) processed')
 
-    matches.to_hd5('input/fixed/processed_matches.h5', key='matches', mode='w')
+    matches.to_hd5('input/generated/processed_matches.h5', key='matches', mode='w')
 
     print('Pre-processed H5 matches saved')
 
