@@ -3,6 +3,7 @@ import datetime
 import pandas as pd
 import numpy as np
 import os
+import re
 from definitions import RAW_PATH
 
 
@@ -11,7 +12,13 @@ def filter_tourney_name(words):
     s = ' '.join(
         w for w in words.split() if (len(w) > 3 or (len(w) == 3 and w[len(w) - 1].isalpha()) or w[len(w) - 1] == '.'))
 
+    # Make lowercase
     s = s.lower()
+
+    # Remove anything but letters and space
+    s = re.sub(r'[^a-z\s]', u'', s, flags=re.UNICODE)
+
+    # Replace all davis cup
     if 'davis cup' in s:
         s = ''
 

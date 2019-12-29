@@ -1,0 +1,773 @@
+,country_name,location
+0,Germany,aachen
+1,Nigeria,abuja
+2,Mexico,acapulco
+3,Ghana,accra
+4,Morocco,agadir
+5,Turkey,agri
+6,Mexico,aguascalientes
+7,France,aix provence
+8,France,ajaccio
+9,Japan,akishima
+10,Nigeria,akko
+11,Kazakhstan,aktobe
+12,Australia,albury
+13,Italy,alessandria
+14,Algeria,algeria
+15,Spain,alicante
+16,The Netherlands,alkmaar
+17,Kazakhstan,almaty
+18,Netherlands,alphen
+19,Netherlands,alphen aan den rijn
+20,The Netherlands,amersfoort
+21,Uzbekistan,andijan
+22,Italy,andria
+23,France,angers
+24,China,anning
+25,South Korea,anseong
+26,Turkey,antalya
+27,Belgium,antwerp
+28,Italy,appiano
+29,United States of America,aptos
+30,Romania,arad
+31,United States of America,arcadia
+32,Argentina,argentina
+33,Belgium,arlon
+34,Armenia,armenia
+35,Kazakhstan,astana
+36,Paraguay,asuncion
+37,Greece,athens
+38,United States,atlanta
+39,atp challenger tour finals,atp challenger tour finals
+40,New Zealand,auckland
+41,Germany,augsburg
+42,United States of America,austin
+43,Australia,australia
+44,Australia,australian open
+45,Austria,austria
+46,Azerbaijan,azerbaijan
+47,Romania,bacau
+48,Germany,bad salzdetfurth
+49,Germany,bad schussenried
+50,France,bagneres bigorre
+51,France,bagnoles lorne
+52,Bahrain,bahrain
+53,Brazil,baja
+54,United States of America,bakersfield
+55,Spain,bakio
+56,Hungary,balatonalmadi
+57,India,bangalore
+58,Thailand,bangkok
+59,Bosnia and Herzegovina,banja luka
+60,China,baotou
+61,Spain,barcelona
+62,Italy,barletta
+63,United Kingdom,barnstaple
+64,Colombia,barranquilla
+65,Switzerland,basel
+66,Sweden,bastad
+67,United Kingdom,bath
+68,Turkey,batman
+69,United States of America,baton rouge
+70,China,beijing
+71,Belarus,belarus
+72,Palestinian Territory,belem
+73,Belgium,belgium
+74,belgium moved from july,belgium moved from july
+75,Serbia,belgrade
+76,Brazil,belo horizonte
+77,India,bengaluru
+78,Spain,benicarlo
+79,Belgium,bercuit
+80,Italy,bergamo
+81,Italy,biella
+82,United States of America,binghamton
+83,France,blois
+84,Brazil,blumenau
+85,Colombia,bogota
+86,Bolivia,bolivia
+87,United Kingdom,bolton
+88,Italy,bolzano
+89,France,bordeaux
+90,Bosnia and Herzegovina,bosnia amp herzegovina
+91,Bosnia and Herzegovina,bosnia herzegovina
+92,France,bourg bresse
+93,United States of America,bradenton
+94,Portugal,braga
+95,Brazil,brasilia
+96,Romania,brasov
+97,Slovakia,bratislava
+98,braunchweig,braunchweig
+99,Germany,braunschweig
+100,Brazil,brazil
+101,Bosnia and Herzegovina,brcko
+102,Italy,brescia
+103,France,bressuire
+104,France,brest
+105,France,brieuc
+106,Australia,brisbane
+107,Belgium,brussels
+108,Colombia,bucaramanga
+109,Romania,bucharest
+110,Hungary,budapest
+111,Argentina,buenos aires
+112,Uzbekistan,bukhara
+113,Bulgaria,bulgaria
+114,Bulgaria,burgas
+115,Australia,burnie
+116,Burundi,burundi
+117,South Korea,busan
+118,Poland,bydgoszcz
+119,Poland,bytom
+120,Mexico,cabo san lucas
+121,Australia,cairns
+122,Egypt,cairo
+123,United States,calabasas
+124,Canada,calgary
+125,Colombia,cali
+126,Australia,caloundra
+127,Italy,caltanissetta
+128,Cambodia,cambodia
+129,Cameroon,cameroon
+130,Brazil,campinas
+131,Brazil,campos jordao
+132,Canada,canada
+133,Canada,canada masters
+134,Australia,canberra
+135,Mexico,cancun
+136,United States,carson
+137,United States of America,cary
+138,Morocco,casablanca
+139,Italy,casale monferrato
+140,Italy,casinalbo
+141,France,cassis
+142,Portugal,castelo branco
+143,challenger tour finals,challenger tour finals
+144,United States,champaign
+145,champaignurbana,champaignurbana
+146,South Korea,changwon
+147,United States,charlottesville
+148,China,chengdu
+149,India,chennai
+150,France,cherbourg
+151,Vietnam,chi minh
+152,Vietnam,chi minh city
+153,United States of America,chicago
+154,Chile,chile
+155,China,china
+156,Taiwan,chinese taipei
+157,United Kingdom,chiswick
+158,Romania,chitila
+159,Panama,chitre
+160,Ukraine,chornomorsk
+161,cincinnati masters,cincinnati masters
+162,United States of America,claremont
+163,United States,cleveland
+164,Colombia,colombia
+165,United States of America,columbus
+166,Italy,como
+167,Vietnam,copy vietnam
+168,Italy,cordenons
+169,Argentina,cordoba
+170,Argentina,corrientes
+171,Italy,cortina
+172,Costa Rica,costa rica
+173,Brazil,costa sauipe
+174,Italy,courmayeur
+175,Italy,cremona
+176,Croatia,croatia
+177,cuba fugures,cuba fugures
+178,Mexico,cuernavaca
+179,Italy,cuneo
+180,Brazil,curitiba
+181,Romania,curtea arges
+182,Cyprus,cyprus
+183,Czechia,czech republic
+184,South Korea,daegu
+185,United States of America,dallas
+186,Australia,darwin
+187,United States,decatur
+188,United States,delray beach
+189,The Netherlands,den haag
+190,Spain,denia
+191,Denmark,denmark
+192,Bosnia and Herzegovina,doboj
+193,Qatar,doha
+194,Dominican Republic,dominican republic
+195,Spain,donostia san sebastian
+196,Germany,dortmund
+197,Canada,drummondville
+198,United Arab Emirates,dubai
+199,Ireland,dublin
+200,Germany,dusseldorf
+201,United States of America,east lansing
+202,United Kingdom,eastbourne
+203,Germany,eckental
+204,Ecuador,ecuador
+205,United States,edwardsville
+206,Egypt,egypt
+207,Turkey,eskisehir
+208,Estonia,estonia
+209,Portugal,estoril
+210,Belgium,eupen
+211,United States,fairfield
+212,Sweden,falun
+213,Italy,fano
+214,Territorial waters of Faroe Islands,faro
+215,United States,fayetteville
+216,Uzbekistan,fergana
+217,Finland,finland
+218,Italy,florence
+219,Brazil,florianopolis
+220,Colombia,floridablanca
+221,France,forbach
+222,United States of America,fort worth
+223,Italy,francavilla mare
+224,France,france
+225,France,france rodez
+226,Germany,furth
+227,Gabon,gabon
+228,Spain,gandia
+229,Canada,gatineau
+230,Switzerland,geneva
+231,Italy,genova
+232,Brazil,geogia
+233,Georgia,georgia
+234,Germany,germany
+235,Spain,getafe madrid
+236,Spain,getxo
+237,South Korea,gimcheon
+238,United Kingdom,glasgow
+239,France,gosier
+240,Canada,granby
+241,France,grasse
+242,United Kingdom,great britain
+243,United Kingdom,great britain future
+244,Greece,greece
+245,France,grenoble
+246,Switzerland,gstaad
+247,Mexico,guadalajara
+248,United States of America (Guam),guam
+249,China,guangzhou
+250,Guatemala,guatemala
+251,Ecuador,guayaquil
+252,Italy,gubbio
+253,Portugal,guimaraes
+254,South Korea,gwangju
+255,Hungary,gyor
+256,Hungary,gyula
+257,Germany,halle
+258,Germany,hamburg
+259,Canada,happy valley
+260,Zimbabwe,harare
+261,Netherlands,haren
+262,United States of America,harlingen
+263,Germany,heilbronn
+264,Finland,helsinki
+265,China,hengyang
+266,Greece,heraklion
+267,Honduras,honduras
+268,China,hong kong
+269,United States of America,honolulu
+270,Switzerland,horgen
+271,United States of America,houston
+272,houstontx,houstontx
+273,Thailand,hua hin
+274,Spain,huelva
+275,Hungary,hungary
+276,Portugal,idanha nova
+277,United Kingdom,ilkley
+278,India,india
+279,United States,indian wells
+280,indian wells masters,indian wells masters
+281,Indonesia,indonesia
+282,India,indore
+283,United States,iowa city
+284,Iran,iran
+285,Ireland,ireland
+286,Ukraine,irpin
+287,United States of America,irving
+288,Germany,ismaning
+289,Israel,israel
+290,Turkey,istanbul
+291,Italy,italy
+292,Turkey,izmir
+293,Czechia,jablonec nad nisou
+294,Indonesia,jakarta
+295,Japan,japan
+296,Jersey,jersey
+297,Israel,jerusalem
+298,China,jinan
+299,South Africa,johannesburg
+300,Sweden,jonkoping
+301,Lebanon,jounieh
+302,Peru,junin
+303,Germany,kaarst
+304,Sweden,kalmar
+305,Germany,kaltenkirchen
+306,Germany,kamen
+307,Uganda,kampala
+308,Taiwan,kaohsiung
+309,Sweden,karlskrona
+310,Germany,karlsruhe
+311,Uzbekistan,karshi
+312,Japan,karuizawa
+313,Japan,kashiwa
+314,Germany,kassel
+315,Kazakhstan,kazakhstan
+316,Russia,kazan
+317,Morocco,kenitra
+318,Israel,kiryat shmona
+319,Bosnia and Herzegovina,kiseljak
+320,Austria,kitzbuhel
+321,United States of America,knoxville
+322,Japan,kobe
+323,Germany,koblenz
+324,Japan,kofu
+325,Belgium,koksijde
+326,India,kolkata
+327,South Korea,korea
+328,Slovakia,kosice
+329,Poland,koszalin
+330,Austria,kramsach
+331,Malaysia,kuala lumpur
+332,China,kunming
+333,China,kunshan
+334,Kuwait,kuwait
+335,Japan,kyoto
+336,Nigeria,lagos
+337,United States of America,lahaina
+338,Paraguay,lambare
+339,Belgium,lambermont
+340,Laos,laos
+341,Italy,laquila
+342,Spain,las palmas gran canaria
+343,United States of America,las vegas
+344,Belgium,lasne
+345,Latvia,latvia
+346,Australia,launceston
+347,Lebanon,lebanon
+348,United States,leon
+349,Russia,lermontov
+350,United States,lexington
+351,Czechia,liberec
+352,France,lille
+353,Peru,lima
+354,Portugal,lisboa
+355,Portugal,lisbon
+356,Lithuania,lithuania
+357,United States,little rock
+358,China,liuzhou
+359,Slovenia,ljubljana
+360,United Kingdom,london
+361,United Kingdom,london olympics
+362,United States of America,los angeles
+363,Mexico,los cabos
+364,United Kingdom,loughborough
+365,Portugal,loule
+366,China,luan
+367,Germany,ludwigshafen
+368,Switzerland,lugano
+369,China,luzhou
+370,France,lyon
+371,North Macedonia,macedonia
+372,Spain,madrid
+373,Spain,madrid masters
+374,Portugal,maia
+375,Spain,majadahonda
+376,Malaysia,malaysia
+377,Uruguay,maldonado
+378,United States,malibu
+379,Spain,mallorca
+380,Spain (territorial waters),manacor
+381,Bahrain,manama
+382,United Kingdom,manchester
+383,Italy,manerbio
+384,Philippines,manila
+385,Italy,manta
+386,Mozambique,maputo
+387,Spain,marbella
+388,Germany,marburg
+389,Morocco,marrakech
+390,France,marsa
+391,France,marseille
+392,Spain,martos
+393,Japan,matsuyama
+394,United States of America (Middle Hawai'ian Islands territorial waters),maui
+395,Colombia,medellin
+396,Germany,meerbusch
+397,Morocco,meknes
+398,Australia,melbourne
+399,Spain,melilla
+400,United States of America,memphis
+401,Argentina,mendoza
+402,Turkey,mersin
+403,Lebanon,meshref
+404,Italy,mestre
+405,France,metz
+406,Mexico,mexico
+407,Mexico,mexico city
+408,United States,miami masters
+409,Italy,milan
+410,Australia,mildura
+411,Czechia,milovice
+412,Belarus,minsk
+413,Morocco,mohammedia
+414,Tunisia,monastir
+415,Belgium,mons
+416,France,montauban
+417,monte carlo masters,monte carlo masters
+418,Mexico,monterrey
+419,Uruguay,montevideo
+420,France,montpellier
+421,Italy,monza
+422,Mexico,morelos
+423,Australia,mornington
+424,Morocco,morocco
+425,Russia,moscow
+426,Czechia,most
+427,France,mouilleron captif
+428,mouilleronlecaptif,mouilleronlecaptif
+429,Mozambique,mozambique
+430,France,mulhouse
+431,Germany,munich
+432,Spain,murcia
+433,Uzbekistan,namangan
+434,China,nanchang
+435,China,nang
+436,China,nanjing
+437,United States,napa
+438,Italy,naples
+439,Italy,napoli
+440,Israel,netanya
+441,Netherlands,netherlands
+442,France,nevers
+443,India,new delhi
+444,United States of America,new haven
+445,United States of America,new york
+446,New Zealand,new zealand
+447,United States of America,newport
+448,United States of America,newport beach
+449,next gen finals,next gen finals
+450,Nicaragua,nicaragua
+451,France,nice
+452,Nigeria,nigeria
+453,China,ningbo
+454,Japan,nishi tama
+455,Japan,nishi tokyo
+456,Thailand,nonthaburi
+457,United States of America,norman
+458,Norway,norway
+459,United Kingdom,nottingham
+460,New Caledonia,noumea
+461,Serbia,novi sad
+462,Spain,nules
+463,Kazakhstan,nursultan
+464,Germany,nussloch
+465,Switzerland,oberentfelden
+466,Germany,oberstaufen
+467,United States,ojai
+468,The Netherlands,oldenzaal
+469,Portugal,oliveira azemeis
+470,Czechia,olomouc
+471,Croatia,opatija
+472,Czech Republic,opava
+473,Poland,open
+474,United States,orange park
+475,Italy,orbetello
+476,United States of America,orlando
+477,Canada,orleans
+478,Italy,ortisei
+479,Norway,oslo
+480,Czechia,ostrava
+481,Spain,oviedo
+482,Italy,padova
+483,Finland,pajulahti
+484,Pakistan,pakistan
+485,Italy,palermo
+486,United States of America,palm coast
+487,Spain,palma del rio
+488,Italy,palmanova
+489,Panama,panama
+490,Panama,panama city
+491,Paraguay,paraguay
+492,Czechia,pardubice
+493,United States of America,paris masters
+494,Italy,parma
+495,Estonia,parnu
+496,France,pau
+497,Colombia,paz
+498,United States of America,pensacola
+499,Russia,penza
+500,Colombia,pereira
+501,Peru,peru
+502,Italy,perugia
+503,Luxembourg,petange
+504,Philippines,philippines
+505,United States of America,phoenix
+506,Slovakia,piestany
+507,Argentina,pinamar
+508,China,pingguo
+509,Italy,piombino
+510,Romania,pitesti
+511,United States,pittsburgh
+512,France,plaisir
+513,Australia,playford
+514,Bulgaria,plovdiv
+515,France,poitiers
+516,Poland,poland
+517,Italy,pontedera
+518,Slovakia,poprad
+519,Slovakia,poprad tatry
+520,popradtatry,popradtatry
+521,Croatia,porec
+522,Portugal,portimao
+523,Portugal,porto
+524,Brazil,porto alegre
+525,Slovenia,portoroz
+526,Ecuador,portoviejo
+527,Portugal,portugal
+528,potro alegre,potro alegre
+529,Poland,poznan
+530,Spain,pozoblanco
+531,Czech Republic,prague
+532,South Africa,pretoria
+533,Bosnia and Herzegovina,prijedor
+534,Czech Republic,prostejov
+535,Mexico,puebla
+536,United States,puerto rico
+537,Mexico,puerto vallarta
+538,Germany,pullach
+539,India,pune
+540,Uruguay,punta del este
+541,Qatar,qatar
+542,China,qingdao
+543,China,quanzhou
+544,Qatar,quatar
+545,United Kingdom,queens club
+546,France,quimper
+547,Argentina,quinta lago
+548,Ecuador,quito
+549,China,qujing
+550,Israel,raanana
+551,Morocco,rabat
+552,Israel,ramat hasharon
+553,Italy,recanati
+554,Brazil,recife
+555,Italy,reggio emilia
+556,France,remy
+557,France,remy provence
+558,France,rennes
+559,France,reunion island
+560,Spain,reus
+561,Greece,rhodes
+562,Spain,ribaroja turia
+563,Czechia,ricany
+564,Croatia,rijeka
+565,Italy,rimini
+566,Canada,rimouski
+567,Mexico,rio janeiro
+568,Belize,rio olympics
+569,Brazil,rio quente
+570,United States,rochester
+571,France,rodez
+572,United Kingdom,roehampton
+573,Mexico,roland garros
+574,Romania,romania
+575,Italy,rome
+576,rome masters,rome masters
+577,The Netherlands,rotterdam
+578,Croatia,rovinj
+579,Russia,russia
+580,Rwanda,rwanda
+581,Germany,saarlouis
+582,Spain,sabadell
+583,United States of America,sacramento
+584,France,saint brieuc
+585,France,saint dizier
+586,Israel,sajur
+587,United States of America,salinas
+588,El Salvador,salvador
+589,Austria,salzburg
+590,Uzbekistan,samarkand
+591,Italy,san benedetto
+592,Italy,san benedetto del tronto
+593,United States of America,san francisco
+594,United States of America,san jose
+595,United States of America,san juan
+596,Mexico,san luis potosi
+597,San Marino,san marino
+598,Argentina,san remo
+599,Spain,san sebastian
+600,Italy,santa cristina val gardena
+601,Spain,santa cruz sierra
+602,Italy,santa margherita pula
+603,El Salvador,santa tecla
+604,Spain,santander
+605,Costa Rica,santiago
+606,Dominican Republic,santo domingo
+607,Brazil,santos
+608,Portugal,sao bras alportel
+609,Brazil,sao jose rio preto
+610,Brazil,sao leopoldo
+611,Brazil,sao paulo
+612,Bosnia and Herzegovina,sarajevo
+613,Russia,saransk
+614,United States of America,sarasota
+615,France,sarreguemines
+616,Saudi Arabia,saudi arabia
+617,United States,savannah
+618,Netherlands,scheveningen
+619,Switzerland,schlieren
+620,Spain,segovia
+621,Senegal,senegal
+622,South Korea,seoul
+623,Kosovo,serbia
+624,Portugal,setubal
+625,Spain,sevilla
+626,Spain,seville
+627,China,shanghai
+628,Philippines,shanghai masters
+629,Egypt,sharm sheikh
+630,China,shenzhen
+631,shertogenbosch,shertogenbosch
+632,United Kingdom,shrewsbury
+633,Kazakhstan,shymkent
+634,Romania,sibiu
+635,Singapore,singapore
+636,Portugal,sintra
+637,slovak rep,slovak rep
+638,Slovakia,slovak republic
+639,Slovakia,slovakia
+640,Slovenia,slovenia
+641,Bulgaria,sofia
+642,France,sophia antipolis
+643,Poland,sopot
+644,South Africa,south africa
+645,Bulgaria,sozopol
+646,Spain,spain
+647,Spain,spain lanzarote
+648,Spain,spain tenerife
+649,Sri Lanka,sri lanka
+650,France,st brieuc
+651,Russia,st petersburg
+652,France,st remy
+653,stbrieuc,stbrieuc
+654,Sweden,stockholm
+655,United States of America,stockton
+656,stpetersburg,stpetersburg
+657,Germany,stuttgart
+658,Sudan,sudan
+659,United Kingdom,sunderland
+660,United States,sunrise
+661,United Kingdom,surbiton
+662,China,suzhou
+663,Sweden,sweden
+664,Switzerland,switzerland
+665,Australia,sydney
+666,Poland,szczecin
+667,Hungary,szekesfehervar
+668,Tunisia,tabarka
+669,Taiwan,taipei
+670,United States of America,tallahassee
+671,Finland,tampere
+672,Morocco,tanger
+673,Romania,targu mures
+674,Spain,tarragona
+675,Uzbekistan,tashkent
+676,Portugal,tavira
+677,Vietnam,tay ninh
+678,Georgia,tbilisi
+679,Israel,tel aviv
+680,Georgia,telavi
+681,Spain,telde gran canaria
+682,Austria,telfs
+683,United States of America,tempe
+684,Thailand,thailand
+685,China,tianjin
+686,Haiti,tiburon
+687,Argentina,tigre
+688,Romania,timisoara
+689,Italy,todi
+690,Togo,togo
+691,Japan,tokyo
+692,Australia,toowoomba
+693,Italy,torino
+694,France,toulouse
+695,tour finals,tour finals
+696,Japan,toyota
+697,Italy,trani
+698,Australia,traralgon
+699,Italy,trento
+700,Germany,trier
+701,Italy,trieste
+702,Slovakia,trnava
+703,Germany,troisdorf
+704,France,troyes
+705,Japan,tsukuba
+706,United States,tucson
+707,United States of America,tulsa
+708,Tunisia,tunis
+709,Tunisia,tunisia
+710,Italy,turin
+711,Turkey,turkey
+712,Russia,tyumen
+713,Germany,ueberlingen
+714,Uganda,uganda
+715,Ukraine,ukraine
+716,Croatia,umag
+717,United Arab Emirates,united arab emirates
+718,France,uriage
+719,Uruguay,uruguay
+720,United States,usa
+721,United States of America,usa fa
+722,United States of America,usa fb
+723,Kazakhstan,ust kamenogorsk
+724,Uzbekistan,uzbekistan
+725,United States of America,vale lobo
+726,Spain,valencia
+727,Spain,valldoreix
+728,Canada,vancouver
+729,Bulgaria,varna
+730,France,veigy foncenex
+731,Venezuela,venezuela
+732,Italy,vercelli
+733,United States,vero beach
+734,Australia,vic
+735,Italy,vicenza
+736,Austria,vienna
+737,Vietnam,vietnam
+738,Spain,vigo
+739,Mexico,villa allende
+740,Spain,villena
+741,France,villers les nancy
+742,Lithuania,vilnius
+743,Chile,vina del mar
+744,Austria,vogau
+745,United States of America,waco
+746,United States of America,washington
+747,Austria,wels
+748,United States,west lakes
+749,United Kingdom,weston
+750,Germany,wetzlar
+751,United States of America,wichita
+752,United Kingdom,wimbledon
+753,United States,winnetka
+754,Canada,winnipeg
+755,United States of America,winston salem
+756,winstonsalem,winstonsalem
+757,Germany,wolfsburg
+758,Poland,wroclaw
+759,China,wuhai
+760,China,wuhan
+761,Spain,xativa
+762,South Korea,yeongwol
+763,China,yinchuan
+764,Japan,yokkaichi
+765,Japan,yokohama
+766,Sweden,ystad
+767,Croatia,zagreb
+768,China,zhangjiagang
+769,China,zhuhai
+770,Zimbabwe,zimbabwe
+771,Serbia,zlatibor
