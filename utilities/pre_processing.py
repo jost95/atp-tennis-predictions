@@ -24,7 +24,7 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     raw_matches = h.load_matches(proc_years)
     raw_matches.sort_values(by=['tourney_date'], inplace=True, ascending=True)
 
-    # TODO: implement home advantage
+    # TODO: implement home advantage, climate
     # TODO: implement very recent performance, last month + tournament
     data_columns = ['date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins', 'mutual_score',
                     'rank_diff', 'points_grad_diff', 'outcome']
