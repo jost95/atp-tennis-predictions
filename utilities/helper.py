@@ -6,6 +6,39 @@ import os
 from definitions import RAW_PATH
 
 
+def filter_tourney_name(words):
+    # This is not the most elegant solution but it works
+    s = ' '.join(
+        w for w in words.split() if (len(w) > 3 or (len(w) == 3 and w[len(w) - 1].isalpha()) or w[len(w) - 1] == '.'))
+
+    s = s.lower()
+    if 'davis cup' in s:
+        s = ''
+
+    return s
+
+
+def fetch_country(location, session):
+    url = "https://nominatim.openstreetmap.org/search"
+
+    params = {
+        "q": location,
+        "format": "json",
+        "addressdetails": 1,
+        "accept-language": "en-US"
+    }
+
+    results = session.get(url=url, params=params).json()
+
+    # If no search results found (e.g. 'atp challenger tour finals')
+    if len(results) == 0:
+        country = location
+    else:
+        country = results[0]['address']['country']
+
+    return country
+
+
 def extract_player_ids(years):
     # Extract active players in a specific year range
 
@@ -42,7 +75,8 @@ def load_matches(years, player_ids=None):
         matches = matches[matches['winner_id'].isin(player_ids) | matches['loser_id'].isin(player_ids)]
 
     # Drop not relevant columns
-    matches = matches.filter(['winner_id', 'loser_id', 'tourney_date', 'tourney_level', 'surface', 'score'])
+    matches = matches.filter(
+        ['tourney_name', 'winner_id', 'loser_id', 'tourney_date', 'tourney_level', 'surface', 'score'])
 
     print('Matches loaded, number of matches:', len(matches))
     return matches

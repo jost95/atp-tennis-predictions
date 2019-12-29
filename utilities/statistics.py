@@ -25,7 +25,6 @@ def generate_match_statistics(filepath, t_weights, base_weight, stats_years, pro
     mutual_score = pd.DataFrame(base_matrix, player_ids, player_ids)
 
     # Create general perfomance matrix
-    # TODO: implement season and climate with lookup table
     cond_cat = ['total_wins', 'total_losses', 'surface_clay_wins', 'surface_clay_losses', 'surface_grass_wins',
                 'surface_grass_losses', 'surface_hard_wins', 'surface_hard_losses', 'surface_carpet_wins',
                 'surface_carpet_losses']

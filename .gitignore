@@ -1,8 +1,8 @@
 # START OF PROJECT SPECIFIC
 
-# Output and generated input folders should not be shared
+# Output (only graphs and such) and match_statistics.h5 (too big) should not be shared
 output/
-input/generated/
+input/generated/match_statistics.h5
 
 # END OF PROJECT SPECIFIC
 # START OF INTELLIJ
