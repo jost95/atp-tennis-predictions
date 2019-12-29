@@ -1,0 +1,24 @@
+{
+  "base_weight": 100,
+  "tourney_weights": {
+    "S": 0.125,
+    "C": 0.25,
+    "A": 0.5,
+    "M": 0.75,
+    "D": 0.75,
+    "G": 1,
+    "F": 1
+  },
+  "stats_year": {
+    "from": 2010,
+    "to": 2014
+  },
+  "proc_year": {
+    "from": 2015,
+    "to": 2019
+  },
+  "generate_stats": false,
+  "generate_training": false,
+  "stats_filename": "match_statistics.h5",
+  "proc_match_filename": "processed_matches.h5"
+}

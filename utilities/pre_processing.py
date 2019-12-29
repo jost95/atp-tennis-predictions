@@ -1,32 +1,27 @@
-import datetime
 import time
-
 import pandas as pd
 import numpy as np
-from typing import Dict
 from utilities import helper as h
 
 
-# noinspection PyTypeChecker
-def generate_data(t_weights, base_weight, from_data_year, to_data_year):
+def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight, proc_years):
     # Generates a match matrix with certain statistics for each match
     print('----- GENERATING PRE-PROCESSED MATCHES -----')
     start_time = time.time()
 
-    filename = 'input/generated/match_statistics.h5'
-    mutual_matches_clay = pd.read_hdf(filename, key='mm_clay')
-    mutual_matches_grass = pd.read_hdf(filename, key='mm_grass')
-    mutual_matches_hard = pd.read_hdf(filename, key='mm_hard')
+    mutual_matches_clay = pd.read_hdf(stats_filepath, key='mm_clay')
+    mutual_matches_grass = pd.read_hdf(stats_filepath, key='mm_grass')
+    mutual_matches_hard = pd.read_hdf(stats_filepath, key='mm_hard')
     mutual_matches = mutual_matches_clay + mutual_matches_grass + mutual_matches_hard
-    mutual_score = pd.read_hdf(filename, key='ms')
-    cond_stats = pd.read_hdf(filename, key='cs')
+    mutual_score = pd.read_hdf(stats_filepath, key='ms')
+    cond_stats = pd.read_hdf(stats_filepath, key='cs')
     print('Generated statistics loaded')
 
     # Load rankings
     rankings = h.load_rankings()
 
     # Load raw_matches and sport by date
-    raw_matches = h.load_matches(from_data_year, to_data_year)
+    raw_matches = h.load_matches(proc_years)
     raw_matches.sort_values(by=['tourney_date'], inplace=True, ascending=True)
 
     # TODO: implement home advantage, season and climate, need lookup table
@@ -48,7 +43,7 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
         winner_id = raw_match.winner_id
         loser_id = raw_match.loser_id
         tourney_date = raw_match.tourney_date
-        time_weight = h.get_time_weight(from_data_year, tourney_date, sign=-1)
+        time_weight = h.get_time_weight(proc_years['from'], tourney_date, sign=-1)
         surface = h.get_surface(raw_match.surface)
 
         # 0. Set date
@@ -124,7 +119,7 @@ def generate_data(t_weights, base_weight, from_data_year, to_data_year):
 
     print('All', no_matches, 'matches (100%) processed')
 
-    matches.to_hdf('input/generated/processed_matches.h5', key='matches', mode='w')
+    matches.to_hdf(proc_match_filepath, key='matches', mode='w')
 
     print('Pre-processed H5 matches saved')
 

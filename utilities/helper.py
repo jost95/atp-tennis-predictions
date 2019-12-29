@@ -2,20 +2,14 @@
 import datetime
 import pandas as pd
 import numpy as np
+import os
+from definitions import RAW_PATH
 
 
-def extract_player_ids(from_year, to_year):
-    # Extract active in a specific year range
-    matches = []
+def extract_player_ids(years):
+    # Extract active players in a specific year range
 
-    for year in range(from_year, to_year + 1):
-        matches.append(
-            pd.read_csv('input/raw/atp_matches_futures_' + str(year) + '.csv', parse_dates=['tourney_date']))
-        matches.append(
-            pd.read_csv('input/raw/atp_matches_qual_chall_' + str(year) + '.csv', parse_dates=['tourney_date']))
-        matches.append(pd.read_csv('input/raw/atp_matches_' + str(year) + '.csv', parse_dates=['tourney_date']))
-
-    matches = pd.concat(matches, sort=False)
+    matches = load_matches(years)
     winner_ids = matches.winner_id.to_numpy()
     loser_ids = matches.loser_id.to_numpy()
 
@@ -26,19 +20,21 @@ def extract_player_ids(from_year, to_year):
     return players
 
 
-def load_matches(from_year, to_year, player_ids=None):
+def load_matches(years, player_ids=None):
     # Load matches in a specific year range
     # If specified, sorts out matches where no players are in player_ids
     matches = []
 
-    for year in range(from_year, to_year + 1):
+    for year in range(years['from'], years['to'] + 1):
         matches.append(
-            pd.read_csv('input/raw/atp_matches_futures_' + str(year) + '.csv', parse_dates=['tourney_date']))
+            pd.read_csv(os.path.join(RAW_PATH, 'atp_matches_futures_' + str(year) + '.csv'),
+                        parse_dates=['tourney_date']))
         matches.append(
-            pd.read_csv('input/raw/atp_matches_qual_chall_' + str(year) + '.csv', parse_dates=['tourney_date']))
-        matches.append(pd.read_csv('input/raw/atp_matches_' + str(year) + '.csv', parse_dates=['tourney_date']))
+            pd.read_csv(os.path.join(RAW_PATH, 'atp_matches_qual_chall_' + str(year) + '.csv'),
+                        parse_dates=['tourney_date']))
+        matches.append(
+            pd.read_csv(os.path.join(RAW_PATH, 'atp_matches_' + str(year) + '.csv'), parse_dates=['tourney_date']))
 
-    # Concatenate data frames
     matches = pd.concat(matches, sort=False)
 
     if player_ids is not None:
@@ -99,8 +95,8 @@ def print_progress(i, no_matches):
 
 def load_rankings():
     # Loads player rankings and sorts them in ascending order
-    rankings_10s = pd.read_csv('input/raw/atp_rankings_10s.csv', parse_dates=['ranking_date'])
-    rankings_current = pd.read_csv('input/raw/atp_rankings_current.csv', parse_dates=['ranking_date'])
+    rankings_10s = pd.read_csv(os.path.join(RAW_PATH, 'atp_rankings_10s.csv'), parse_dates=['ranking_date'])
+    rankings_current = pd.read_csv(os.path.join(RAW_PATH, 'atp_rankings_current.csv'), parse_dates=['ranking_date'])
     rankings = pd.concat([rankings_10s, rankings_current], sort=False)
 
     # Sort by date (oldest ranking first)

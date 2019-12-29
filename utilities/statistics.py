@@ -1,21 +1,20 @@
 import time
-import datetime
 import pandas as pd
 import numpy as np
 from utilities import helper as h
 
 
-def generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_year, from_data_year, to_data_year):
+def generate_match_statistics(filepath, t_weights, base_weight, stats_years, proc_years):
     # Generates match statistics matrices for a certain time period
     print('----- GENERATING MATCH STATISTICS -----')
     start_time = time.time()
 
     # Load players
-    player_ids = h.extract_player_ids(from_data_year, to_data_year)
+    player_ids = h.extract_player_ids(proc_years)
     no_players = len(player_ids)
 
     # Load matches to generate statistics
-    matches = h.load_matches(from_stats_year, to_stats_year, player_ids)
+    matches = h.load_matches(stats_years, player_ids)
     no_matches = len(matches)
 
     # Create mutual stats matrices
@@ -42,7 +41,7 @@ def generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_
     for match in matches.itertuples():
         winner_id = match.winner_id
         loser_id = match.loser_id
-        time_weight = h.get_time_weight(to_stats_year, match.tourney_date)
+        time_weight = h.get_time_weight(stats_years['to'], match.tourney_date)
         surface = h.get_surface(match.surface)
 
         # Calculate match weights
@@ -90,12 +89,11 @@ def generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_
     print('All', no_matches, 'matches (100%) processed')
 
     # To avoid running script every training phase
-    filename = 'input/generated/match_statistics.h5'
-    mutual_matches_clay.to_hdf(filename, key='mm_clay', mode='w')
-    mutual_matches_grass.to_hdf(filename, key='mm_grass')
-    mutual_matches_hard.to_hdf(filename, key='mm_hard')
-    mutual_score.to_hdf(filename, key='ms')
-    cond_stats.to_hdf(filename, key='cs')
+    mutual_matches_clay.to_hdf(filepath, key='mm_clay', mode='w')
+    mutual_matches_grass.to_hdf(filepath, key='mm_grass')
+    mutual_matches_hard.to_hdf(filepath, key='mm_hard')
+    mutual_score.to_hdf(filepath, key='ms')
+    cond_stats.to_hdf(filepath, key='cs')
 
     print('H5 statistics file saved')
 
