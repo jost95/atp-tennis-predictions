@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
+# ----- START CONFIG -----
 base_weight = 100  # so integers can be used in data matrices
 
 # Tournament weights
@@ -23,14 +24,13 @@ from_stats_year = 2010
 to_stats_year = 2014
 from_data_year = to_stats_year + 1
 to_data_year = 2019
-
 generate_statistics = False
+generate_training = False
+# ----- END CONFIG -----
 
 # Create new statistical data to be used for training
 if generate_statistics:
     generate_match_statistics(t_weights, base_weight, from_stats_year, to_stats_year, from_data_year, to_data_year)
-
-generate_training = False
 
 # Generate new training data to be evaluated
 if generate_training:
