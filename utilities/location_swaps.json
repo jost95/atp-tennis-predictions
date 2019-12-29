@@ -29,7 +29,7 @@
   {
     "from": [
       "champaignurbana",
-      "United States",
+      "United States of America",
       "cincinnati masters",
       "United States of America (Guam)",
       "houstontx",
@@ -37,7 +37,7 @@
       "United States of America (Middle Hawai'ian Islands territorial waters)",
       "winstonsalem"
     ],
-    "to": "United States of America"
+    "to": "United States"
   },
   {
     "from": [
@@ -80,7 +80,8 @@
   },
   {
     "from": [
-      "stpetersburg"
+      "stpetersburg",
+      "Russia"
     ],
     "to": "Russian Federation"
   },
@@ -137,5 +138,23 @@
       "Vietnam"
     ],
     "to": "Viet Nam"
+  },
+  {
+    "from": [
+      "Czech Republic"
+    ],
+    "to": "Czechia"
+  },
+  {
+    "from": [
+      "Palestinian Territory"
+    ],
+    "to": "Palestine, State of"
+  },
+  {
+    "from": [
+      "South Korea"
+    ],
+    "to": "Korea, Republic of"
   }
 ]

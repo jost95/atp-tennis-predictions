@@ -67,12 +67,14 @@ def manual_country_fix():
 
 
 def get_country_code():
-    tourney_info = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'))
+    tourney_info = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'), index_col=0)
+
+    # Add new country code column
+    country_code = pd.DataFrame(np.zeros_like(tourney_info.country_name), columns=['country_code'])
+    tourney_info = pd.concat([tourney_info, country_code], sort=False, axis=1)
+
     unique_countries = np.unique(tourney_info.country_name)
     unique_ccs = []
-
-    for c in list(pycountry.countries):
-        print(c.name)
 
     for country in unique_countries:
         try:
@@ -80,15 +82,42 @@ def get_country_code():
         except AttributeError:
             unique_ccs.append(country)
 
-    print(unique_ccs)
+    for i in range(len(unique_ccs)):
+        tourney_info.loc[tourney_info.country_name == unique_countries[i], 'country_code'] = unique_ccs[i]
+
+    tourney_info.to_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'))
+
+
+def get_climate():
+    tourney_info = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'), index_col=0)
+
+    # Add new climate column
+    climate = pd.DataFrame(tourney_info.country_name.tolist(), columns=['climate'])
+    tourney_info = pd.concat([tourney_info, climate], sort=False, axis=1)
+
+    with open(os.path.join(ROOT_DIR, 'utilities/country_climate.json')) as f:
+        unique_climates = json.load(f)
+
+    to_climates = []
+    from_countries = []
+
+    for climate in unique_climates:
+        for country in climate['countries']:
+            from_countries.append(country)
+            to_climates.append(climate['climate'])
+
+    tourney_info.country_name.replace(from_countries, to_climates, inplace=True)
+    tourney_info.to_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'))
+
 
 # 1. Geo-location search for country name (takes time)
 # extract_country_name()
 
 # 2 Fix wrongly formatted countries and sort by country
-# manual_country_fix()
+manual_country_fix()
 
 # 3. Lookup country code
 get_country_code()
 
 # 4. Lookup climate
+get_climate()
