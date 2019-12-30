@@ -1,6 +1,9 @@
+import os
 import time
 import pandas as pd
 import numpy as np
+
+from definitions import RAW_PATH, GEN_PATH
 from utilities import helper as h
 
 
@@ -24,10 +27,13 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     raw_matches = h.load_matches(proc_years)
     raw_matches.sort_values(by=['tourney_date'], inplace=True, ascending=True)
 
+    # Load tournament details
+    tourneys = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'))
+
     # TODO: implement home advantage, climate
     # TODO: implement very recent performance, last month + tournament
     data_columns = ['date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins', 'mutual_score',
-                    'rank_diff', 'points_grad_diff', 'outcome']
+                    'rank_diff', 'points_grad_diff', 'home_advantage', 'outcome']
     matches = np.zeros((len(raw_matches), len(data_columns)), dtype=np.int64)
     matches = pd.DataFrame(matches, columns=data_columns)
 
@@ -75,7 +81,11 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         match.rank_diff = rank_diff
         match.points_grad_diff = points_grad_diff
 
-        # 6. Winner is always winner
+        # 6. Home advantage
+        home_advantage = h.get_home_advantage(match.winner_ioc, match.loser_ioc, tourneys, match.tourney_name)
+        match.home_advantage = home_advantage
+
+        # 7. Winner is always winner
         match.outcome = 1
 
         # Create a balanced set with equal outcomes

@@ -7,6 +7,24 @@ import re
 from definitions import RAW_PATH
 
 
+def get_home_advantage(winner_ioc, loser_ioc, tourneys, tourney_location):
+    tourney_location = filter_tourney_name(tourney_location)
+
+    if len(tourney_location) == 0:
+        return 0
+    else:
+        tourney_country = tourneys.loc(tourneys.location == tourney_location)
+
+        if winner_ioc == tourney_country and loser_ioc == tourney_country:
+            return 0
+        elif winner_ioc == tourney_country:
+            return 1
+        elif loser_ioc == tourney_country:
+            return -1
+        else:
+            return 0
+
+
 def filter_tourney_name(words):
     # This is not the most elegant solution but it works
     s = ' '.join(
@@ -83,7 +101,8 @@ def load_matches(years, player_ids=None):
 
     # Drop not relevant columns
     matches = matches.filter(
-        ['tourney_name', 'winner_id', 'loser_id', 'tourney_date', 'tourney_level', 'surface', 'score'])
+        ['tourney_name', 'winner_id', 'winner_ioc', 'loser_id', 'loser_ioc', 'tourney_date', 'tourney_level',
+         'surface', 'score'])
 
     print('Matches loaded, number of matches:', len(matches))
     return matches
