@@ -1,6 +1,9 @@
+import os
 import time
 import pandas as pd
 import numpy as np
+
+from definitions import GEN_PATH
 from utilities import helper as h
 
 
@@ -27,9 +30,13 @@ def generate_match_statistics(filepath, t_weights, base_weight, stats_years, pro
     # Create general perfomance matrix
     cond_cat = ['total_wins', 'total_losses', 'surface_clay_wins', 'surface_clay_losses', 'surface_grass_wins',
                 'surface_grass_losses', 'surface_hard_wins', 'surface_hard_losses', 'surface_carpet_wins',
-                'surface_carpet_losses']
+                'surface_carpet_losses', 'climate_tropical_dry_wins', 'climate_tropical_dry_losses',
+                'climate_tempered_wins', 'climate_tempered_losses']
     cond_stats = np.zeros((no_players, len(cond_cat)), dtype=np.int64)
     cond_stats = pd.DataFrame(cond_stats, player_ids, cond_cat)
+
+    # Load tournament details
+    tourneys = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'), index_col=0)
 
     # Counter for timing purposes
     i = 0
@@ -42,6 +49,14 @@ def generate_match_statistics(filepath, t_weights, base_weight, stats_years, pro
         loser_id = match.loser_id
         time_weight = h.get_time_weight(stats_years['to'], match.tourney_date)
         surface = h.get_surface(match.surface)
+        location = h.filter_tourney_name(match.tourney_name)
+        climate = tourneys.loc[tourneys.location == location, 'climate']
+
+        if len(climate) > 0:
+            climate = climate.iloc[0]
+        else:
+            # If climate unknown, assume tempered (maybe indoor)
+            climate = 'tempered'
 
         # Calculate match weights
         match_d_weight = round(base_weight * time_weight)
@@ -55,12 +70,14 @@ def generate_match_statistics(filepath, t_weights, base_weight, stats_years, pro
         if winner_id in player_ids:
             cond_stats['total_wins'][winner_id] += match_dt_weight
             cond_stats['surface_' + surface + '_wins'][winner_id] += match_d_weight
+            cond_stats['climate_' + climate + '_wins'][winner_id] += match_d_weight
             winner_in_ids = True
 
         # Loser stats
         if loser_id in player_ids:
             cond_stats['total_losses'][loser_id] += match_dt_weight
             cond_stats['surface_' + surface + '_losses'][loser_id] += match_d_weight
+            cond_stats['climate_' + climate + '_losses'][loser_id] += match_d_weight
             loser_in_ids = True
 
         # Mutual statistics

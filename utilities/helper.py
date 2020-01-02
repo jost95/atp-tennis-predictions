@@ -7,19 +7,20 @@ import re
 from definitions import RAW_PATH
 
 
-def get_home_advantage(winner_ioc, loser_ioc, tourneys, tourney_location):
-    tourney_location = filter_tourney_name(tourney_location)
+def get_home_advantage(winner_ioc, loser_ioc, tourneys, tourney_name):
+    location = filter_tourney_name(tourney_name)
+    country_code = tourneys.loc[tourneys.location == location, 'country_code']
 
-    if len(tourney_location) == 0:
+    if len(country_code) == 0:
         return 0
     else:
-        tourney_country = tourneys.loc(tourneys.location == tourney_location)
+        country_code = country_code.iloc[0]
 
-        if winner_ioc == tourney_country and loser_ioc == tourney_country:
+        if winner_ioc == country_code and loser_ioc == country_code:
             return 0
-        elif winner_ioc == tourney_country:
+        elif winner_ioc == country_code:
             return 1
-        elif loser_ioc == tourney_country:
+        elif loser_ioc == country_code:
             return -1
         else:
             return 0
@@ -102,7 +103,10 @@ def load_matches(years, player_ids=None):
     # Drop not relevant columns
     matches = matches.filter(
         ['tourney_name', 'winner_id', 'winner_ioc', 'loser_id', 'loser_ioc', 'tourney_date', 'tourney_level',
-         'surface', 'score'])
+         'surface', 'score', 'match_num', 'tourney_id'])
+
+    # Sort by date (oldest ranking first)
+    matches.sort_values(by=['tourney_date', 'match_num'], inplace=True, ascending=True)
 
     print('Matches loaded, number of matches:', len(matches))
     return matches
@@ -164,6 +168,99 @@ def load_rankings():
 
     print('Rankings loaded')
     return rankings
+
+
+def get_tourney_games(winner_id, loser_id, recent_matches, tourney_id, match_num):
+    # Get recent performance in relative number of games IN CURRENT tournament
+    games_won_winner = 0
+    gammes_played_winner = 0
+    games_won_loser = 0
+    games_played_loser = 0
+
+    for match in recent_matches.itertuples():
+        if match.tourney_id == tourney_id and match.match_num < match_num:
+            winner_games, loser_games = get_score(match.score)
+
+            if match.winner_id == winner_id:
+                games_won_winner += winner_games
+                gammes_played_winner += winner_games
+            elif match.winner_id == loser_id:
+                games_won_loser += loser_games
+                games_played_loser += loser_games
+
+            if match.loser_id == winner_id:
+                gammes_played_winner += loser_games
+            elif match.loser_id == loser_id:
+                games_played_loser += loser_games
+
+    if gammes_played_winner == 0:
+        rel_wins_winner = 0
+    else:
+        rel_wins_winner = games_won_winner / gammes_played_winner
+
+    if games_played_loser == 0:
+        rel_wins_loser = 0
+    else:
+        rel_wins_loser = games_won_loser / games_played_loser
+
+    return rel_wins_winner - rel_wins_loser
+
+
+def get_recent_performance(winner_id, loser_id, recent_matches, tourney_id):
+    # Extract recent perfomance in terms of relative win from recent matches BEFORE tournament
+    recent_wins_winner = 0
+    recent_played_winner = 0
+    recent_wins_loser = 0
+    recent_played_loser = 0
+
+    for match in recent_matches.itertuples():
+        if match.tourney_id != tourney_id:
+            if match.winner_id == winner_id:
+                recent_wins_winner += 1
+                recent_played_winner += 1
+            elif match.winner_id == loser_id:
+                recent_wins_loser += 1
+                recent_played_loser += 1
+
+            if match.loser_id == winner_id:
+                recent_played_winner += 1
+            elif match.loser_id == loser_id:
+                recent_played_loser += 1
+
+    if recent_played_winner == 0:
+        rel_wins_winner = 0
+    else:
+        rel_wins_winner = recent_wins_winner / recent_played_winner
+
+    if recent_played_loser == 0:
+        rel_wins_loser = 0
+    else:
+        rel_wins_loser = recent_wins_loser / recent_played_loser
+
+    return rel_wins_winner - rel_wins_loser
+
+
+def get_relative_climate_wins(cond_stats, winner_id, loser_id, climate):
+    # For each player, calculates the ratio won matches in the current climate and
+    # then takes the difference between them
+    climate_wins_winner = cond_stats['climate_' + climate + '_wins'][winner_id]
+    climate_losses_winner = cond_stats['climate_' + climate + '_losses'][winner_id]
+    climate_played_winner = climate_wins_winner + climate_losses_winner
+    climate_wins_loser = cond_stats['climate_' + climate + '_wins'][loser_id]
+    climate_losses_loser = cond_stats['climate_' + climate + '_losses'][loser_id]
+    climate_played_loser = climate_wins_loser + climate_losses_loser
+
+    if climate_played_winner == 0:
+        rel_climate_wins_winner = 0
+    else:
+        rel_climate_wins_winner = float(climate_wins_winner) / climate_played_winner
+
+    if climate_played_loser == 0:
+        rel_climate_wins_loser = 0
+    else:
+        rel_climate_wins_loser = float(climate_wins_loser) / climate_played_loser
+
+    return rel_climate_wins_winner - rel_climate_wins_loser
 
 
 def get_relative_surface_wins(cond_stats, winner_id, loser_id, surface):

@@ -1,3 +1,4 @@
+import datetime
 import os
 import time
 import pandas as pd
@@ -27,13 +28,24 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     raw_matches = h.load_matches(proc_years)
     raw_matches.sort_values(by=['tourney_date'], inplace=True, ascending=True)
 
-    # Load tournament details
-    tourneys = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'))
+    # Load last years matches to calculate recent performance for matches in january
+    last_year = proc_years['from'] - 1
+    recent_years = {
+        'from': last_year,
+        'to': last_year
+    }
 
-    # TODO: implement home advantage, climate
-    # TODO: implement very recent performance, last month + tournament
+    current_tourney_date = raw_matches.iloc[0].tourney_date
+    date_limit = current_tourney_date - pd.DateOffset(months=1)
+    recent_matches = h.load_matches(recent_years)
+    recent_matches = recent_matches.loc[recent_matches.tourney_date > date_limit]
+
+    # Load tournament details
+    tourneys = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'), index_col=0)
+
     data_columns = ['date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins', 'mutual_score',
-                    'rank_diff', 'points_grad_diff', 'home_advantage', 'outcome']
+                    'rank_diff', 'points_grad_diff', 'home_advantage', 'rel_climate_wins', 'rel_recent_wins',
+                    'rel_tourney_games', 'outcome']
     matches = np.zeros((len(raw_matches), len(data_columns)), dtype=np.int64)
     matches = pd.DataFrame(matches, columns=data_columns)
 
@@ -51,9 +63,20 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         tourney_date = raw_match.tourney_date
         time_weight = h.get_time_weight(proc_years['from'], tourney_date, sign=-1)
         surface = h.get_surface(raw_match.surface)
+        location = h.filter_tourney_name(raw_match.tourney_name)
+        climate = tourneys.loc[tourneys.location == location, 'climate']
 
-        # 0. Set date
-        match.date = tourney_date
+        if len(climate) > 0:
+            climate = climate.iloc[0]
+        else:
+            # If climate unknown, assume tempered (maybe indoor)
+            climate = 'tempered'
+
+        # Update recent matches where tournament date is strictly larger one month ago
+        if tourney_date > current_tourney_date:
+            current_tourney_date = tourney_date
+            date_limit = current_tourney_date - pd.DateOffset(months=1)
+            recent_matches = recent_matches.loc[recent_matches.tourney_date > date_limit]
 
         # 1. Relative total win raw_matches differences
         rel_total_wins = h.get_relative_total_wins(cond_stats, winner_id, loser_id)
@@ -82,18 +105,39 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         match.points_grad_diff = points_grad_diff
 
         # 6. Home advantage
-        home_advantage = h.get_home_advantage(match.winner_ioc, match.loser_ioc, tourneys, match.tourney_name)
+        home_advantage = h.get_home_advantage(raw_match.winner_ioc, raw_match.loser_ioc, tourneys,
+                                              raw_match.tourney_name)
         match.home_advantage = home_advantage
 
-        # 7. Winner is always winner
+        # 7. Relative climate win differences
+        rel_climate_wins = h.get_relative_climate_wins(cond_stats, winner_id, loser_id, climate)
+        match.rel_climate_wins = round(base_weight * rel_climate_wins)
+
+        # 8. Get recent wins
+        rel_recent_wins = h.get_recent_performance(winner_id, loser_id, recent_matches, tourney_date)
+        match.rel_recent_wins = round(base_weight * rel_recent_wins)
+
+        # 9. Get tournament performance in games
+        tourney_id = raw_match.tourney_id
+        match_num = raw_match.match_num
+        rel_tourney_games = h.get_tourney_games(winner_id, loser_id, recent_matches, tourney_id, match_num)
+        match.rel_tourney_games = rel_tourney_games
+
+        # 10. Winner is always winner
         match.outcome = 1
 
         # Create a balanced set with equal outcomes
         if i % 2 == 0:
             match = -match
 
+        # 11. Set date after balancing set
+        match.date = tourney_date
+
         # Update entry
         matches.iloc[i] = match
+
+        # Add current match to recent matches
+        recent_matches = recent_matches.append(pd.Series(raw_match).to_frame())
 
         # Update stats matrices
         match_d_weight = round(base_weight * time_weight)
@@ -101,8 +145,10 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
 
         cond_stats['total_wins'][winner_id] += match_dt_weight
         cond_stats['surface_' + surface + '_wins'][winner_id] += match_d_weight
+        cond_stats['climate_' + climate + '_wins'][winner_id] += match_d_weight
         cond_stats['total_losses'][loser_id] += match_dt_weight
         cond_stats['surface_' + surface + '_losses'][loser_id] += match_d_weight
+        cond_stats['climate_' + climate + '_losses'][loser_id] += match_d_weight
 
         # Update mutual stats
         mutual_matches[winner_id][loser_id] += match_d_weight

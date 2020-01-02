@@ -1,773 +1,773 @@
 ,country_name,location,country_code,climate
-0,tropical_dry,algeria,DZA,Algeria
-1,tropical_dry,argentina,ARG,Argentina
-2,tropical_dry,buenos aires,ARG,Argentina
-3,tropical_dry,cordoba,ARG,Argentina
-4,tropical_dry,corrientes,ARG,Argentina
-5,tropical_dry,mendoza,ARG,Argentina
-6,tropical_dry,pinamar,ARG,Argentina
-7,tropical_dry,quinta lago,ARG,Argentina
-8,tropical_dry,san remo,ARG,Argentina
-9,tropical_dry,tigre,ARG,Argentina
-10,tempered,armenia,ARM,Armenia
-11,tropical_dry,albury,AUS,Australia
-12,tropical_dry,australia,AUS,Australia
-13,tropical_dry,australian open,AUS,Australia
-14,tropical_dry,brisbane,AUS,Australia
-15,tropical_dry,burnie,AUS,Australia
-16,tropical_dry,cairns,AUS,Australia
-17,tropical_dry,caloundra,AUS,Australia
-18,tropical_dry,canberra,AUS,Australia
-19,tropical_dry,darwin,AUS,Australia
-20,tropical_dry,launceston,AUS,Australia
-21,tropical_dry,melbourne,AUS,Australia
-22,tropical_dry,mildura,AUS,Australia
-23,tropical_dry,mornington,AUS,Australia
-24,tropical_dry,playford,AUS,Australia
-25,tropical_dry,sydney,AUS,Australia
-26,tropical_dry,toowoomba,AUS,Australia
-27,tropical_dry,traralgon,AUS,Australia
-28,tropical_dry,vic,AUS,Australia
-29,tempered,austria,AUT,Austria
-30,tempered,kitzbuhel,AUT,Austria
-31,tempered,kramsach,AUT,Austria
-32,tempered,salzburg,AUT,Austria
-33,tempered,telfs,AUT,Austria
-34,tempered,vienna,AUT,Austria
-35,tempered,vogau,AUT,Austria
-36,tempered,wels,AUT,Austria
-37,tropical_dry,azerbaijan,AZE,Azerbaijan
-38,tropical_dry,bahrain,BHR,Bahrain
-39,tropical_dry,manama,BHR,Bahrain
-40,tempered,belarus,BLR,Belarus
-41,tempered,minsk,BLR,Belarus
-42,tempered,antwerp,BEL,Belgium
-43,tempered,arlon,BEL,Belgium
-44,tempered,belgium,BEL,Belgium
-45,tempered,belgium moved from july,BEL,Belgium
-46,tempered,bercuit,BEL,Belgium
-47,tempered,brussels,BEL,Belgium
-48,tempered,eupen,BEL,Belgium
-49,tempered,koksijde,BEL,Belgium
-50,tempered,lambermont,BEL,Belgium
-51,tempered,lasne,BEL,Belgium
-52,tempered,mons,BEL,Belgium
-53,tropical_dry,rio olympics,BLZ,Belize
-54,tropical_dry,bolivia,BOL,"Bolivia, Plurinational State of"
-55,tempered,banja luka,BIH,Bosnia and Herzegovina
-56,tempered,bosnia amp herzegovina,BIH,Bosnia and Herzegovina
-57,tempered,bosnia herzegovina,BIH,Bosnia and Herzegovina
-58,tempered,brcko,BIH,Bosnia and Herzegovina
-59,tempered,doboj,BIH,Bosnia and Herzegovina
-60,tempered,kiseljak,BIH,Bosnia and Herzegovina
-61,tempered,prijedor,BIH,Bosnia and Herzegovina
-62,tempered,sarajevo,BIH,Bosnia and Herzegovina
-63,tropical_dry,atp challenger tour finals,BRA,Brazil
-64,tropical_dry,baja,BRA,Brazil
-65,tropical_dry,belo horizonte,BRA,Brazil
-66,tropical_dry,blumenau,BRA,Brazil
-67,tropical_dry,brasilia,BRA,Brazil
-68,tropical_dry,brazil,BRA,Brazil
-69,tropical_dry,campinas,BRA,Brazil
-70,tropical_dry,campos jordao,BRA,Brazil
-71,tropical_dry,challenger tour finals,BRA,Brazil
-72,tropical_dry,costa sauipe,BRA,Brazil
-73,tropical_dry,curitiba,BRA,Brazil
-74,tropical_dry,florianopolis,BRA,Brazil
-75,tropical_dry,geogia,BRA,Brazil
-76,tropical_dry,porto alegre,BRA,Brazil
-77,tropical_dry,potro alegre,BRA,Brazil
-78,tropical_dry,recife,BRA,Brazil
-79,tropical_dry,rio quente,BRA,Brazil
-80,tropical_dry,santos,BRA,Brazil
-81,tropical_dry,sao jose rio preto,BRA,Brazil
-82,tropical_dry,sao leopoldo,BRA,Brazil
-83,tropical_dry,sao paulo,BRA,Brazil
-84,tempered,bulgaria,BGR,Bulgaria
-85,tempered,burgas,BGR,Bulgaria
-86,tempered,plovdiv,BGR,Bulgaria
-87,tempered,sofia,BGR,Bulgaria
-88,tempered,sozopol,BGR,Bulgaria
-89,tempered,varna,BGR,Bulgaria
-90,tropical_dry,burundi,BDI,Burundi
-91,tropical_dry,cambodia,KHM,Cambodia
-92,tropical_dry,cameroon,CMR,Cameroon
-93,tempered,calgary,CAN,Canada
-94,tempered,canada,CAN,Canada
-95,tempered,canada masters,CAN,Canada
-96,tempered,drummondville,CAN,Canada
-97,tempered,gatineau,CAN,Canada
-98,tempered,granby,CAN,Canada
-99,tempered,happy valley,CAN,Canada
-100,tempered,orleans,CAN,Canada
-101,tempered,rimouski,CAN,Canada
-102,tempered,vancouver,CAN,Canada
-103,tempered,winnipeg,CAN,Canada
-104,tropical_dry,chile,CHL,Chile
-105,tropical_dry,vina del mar,CHL,Chile
-106,tropical_dry,anning,CHN,China
-107,tropical_dry,baotou,CHN,China
-108,tropical_dry,beijing,CHN,China
-109,tropical_dry,chengdu,CHN,China
-110,tropical_dry,china,CHN,China
-111,tropical_dry,guangzhou,CHN,China
-112,tropical_dry,hengyang,CHN,China
-113,tropical_dry,hong kong,CHN,China
-114,tropical_dry,jinan,CHN,China
-115,tropical_dry,kunming,CHN,China
-116,tropical_dry,kunshan,CHN,China
-117,tropical_dry,liuzhou,CHN,China
-118,tropical_dry,luan,CHN,China
-119,tropical_dry,luzhou,CHN,China
-120,tropical_dry,nanchang,CHN,China
-121,tropical_dry,nang,CHN,China
-122,tropical_dry,nanjing,CHN,China
-123,tropical_dry,ningbo,CHN,China
-124,tropical_dry,pingguo,CHN,China
-125,tropical_dry,qingdao,CHN,China
-126,tropical_dry,quanzhou,CHN,China
-127,tropical_dry,qujing,CHN,China
-128,tropical_dry,shanghai,CHN,China
-129,tropical_dry,shenzhen,CHN,China
-130,tropical_dry,suzhou,CHN,China
-131,tropical_dry,tianjin,CHN,China
-132,tropical_dry,wuhai,CHN,China
-133,tropical_dry,wuhan,CHN,China
-134,tropical_dry,yinchuan,CHN,China
-135,tropical_dry,zhangjiagang,CHN,China
-136,tropical_dry,zhuhai,CHN,China
-137,tropical_dry,barranquilla,COL,Colombia
-138,tropical_dry,bogota,COL,Colombia
-139,tropical_dry,bucaramanga,COL,Colombia
-140,tropical_dry,cali,COL,Colombia
-141,tropical_dry,colombia,COL,Colombia
-142,tropical_dry,floridablanca,COL,Colombia
-143,tropical_dry,medellin,COL,Colombia
-144,tropical_dry,paz,COL,Colombia
-145,tropical_dry,pereira,COL,Colombia
-146,tropical_dry,costa rica,CRI,Costa Rica
-147,tropical_dry,santiago,CRI,Costa Rica
-148,tropical_dry,croatia,HRV,Croatia
-149,tropical_dry,opatija,HRV,Croatia
-150,tropical_dry,porec,HRV,Croatia
-151,tropical_dry,rijeka,HRV,Croatia
-152,tropical_dry,rovinj,HRV,Croatia
-153,tropical_dry,umag,HRV,Croatia
-154,tropical_dry,zagreb,HRV,Croatia
-155,tropical_dry,cuba fugures,CUB,Cuba
-156,tropical_dry,cyprus,CYP,Cyprus
-157,tempered,czech republic,CZE,Czechia
-158,tempered,jablonec nad nisou,CZE,Czechia
-159,tempered,liberec,CZE,Czechia
-160,tempered,milovice,CZE,Czechia
-161,tempered,most,CZE,Czechia
-162,tempered,olomouc,CZE,Czechia
-163,tempered,opava,CZE,Czechia
-164,tempered,ostrava,CZE,Czechia
-165,tempered,pardubice,CZE,Czechia
-166,tempered,prague,CZE,Czechia
-167,tempered,prostejov,CZE,Czechia
-168,tempered,ricany,CZE,Czechia
-169,tempered,denmark,DNK,Denmark
-170,tropical_dry,dominican republic,DOM,Dominican Republic
-171,tropical_dry,santo domingo,DOM,Dominican Republic
-172,tropical_dry,ecuador,ECU,Ecuador
-173,tropical_dry,guayaquil,ECU,Ecuador
-174,tropical_dry,portoviejo,ECU,Ecuador
-175,tropical_dry,quito,ECU,Ecuador
-176,tropical_dry,cairo,EGY,Egypt
-177,tropical_dry,egypt,EGY,Egypt
-178,tropical_dry,sharm sheikh,EGY,Egypt
-179,tropical_dry,salvador,SLV,El Salvador
-180,tropical_dry,santa tecla,SLV,El Salvador
-181,tempered,estonia,EST,Estonia
-182,tempered,parnu,EST,Estonia
-183,tempered,faro,FRO,Faroe Islands
-184,tempered,finland,FIN,Finland
-185,tempered,helsinki,FIN,Finland
-186,tempered,pajulahti,FIN,Finland
-187,tempered,tampere,FIN,Finland
-188,tempered,aix provence,FRA,France
-189,tempered,ajaccio,FRA,France
-190,tempered,angers,FRA,France
-191,tempered,bagneres bigorre,FRA,France
-192,tempered,bagnoles lorne,FRA,France
-193,tempered,blois,FRA,France
-194,tempered,bordeaux,FRA,France
-195,tempered,bourg bresse,FRA,France
-196,tempered,bressuire,FRA,France
-197,tempered,brest,FRA,France
-198,tempered,brieuc,FRA,France
-199,tempered,cassis,FRA,France
-200,tempered,cherbourg,FRA,France
-201,tempered,forbach,FRA,France
-202,tempered,france,FRA,France
-203,tempered,france rodez,FRA,France
-204,tempered,gosier,FRA,France
-205,tempered,grasse,FRA,France
-206,tempered,grenoble,FRA,France
-207,tempered,lille,FRA,France
-208,tempered,lyon,FRA,France
-209,tempered,marsa,FRA,France
-210,tempered,marseille,FRA,France
-211,tempered,metz,FRA,France
-212,tempered,montauban,FRA,France
-213,tempered,montpellier,FRA,France
-214,tempered,mouilleron captif,FRA,France
-215,tempered,mouilleronlecaptif,FRA,France
-216,tempered,mulhouse,FRA,France
-217,tempered,nevers,FRA,France
-218,tempered,nice,FRA,France
-219,tempered,pau,FRA,France
-220,tempered,plaisir,FRA,France
-221,tempered,poitiers,FRA,France
-222,tempered,quimper,FRA,France
-223,tempered,remy,FRA,France
-224,tempered,remy provence,FRA,France
-225,tempered,rennes,FRA,France
-226,tempered,reunion island,FRA,France
-227,tempered,rodez,FRA,France
-228,tempered,saint brieuc,FRA,France
-229,tempered,saint dizier,FRA,France
-230,tempered,sarreguemines,FRA,France
-231,tempered,sophia antipolis,FRA,France
-232,tempered,st brieuc,FRA,France
-233,tempered,st remy,FRA,France
-234,tempered,stbrieuc,FRA,France
-235,tempered,toulouse,FRA,France
-236,tempered,troyes,FRA,France
-237,tempered,uriage,FRA,France
-238,tempered,veigy foncenex,FRA,France
-239,tempered,villers les nancy,FRA,France
-240,tropical_dry,gabon,GAB,Gabon
-241,tempered,georgia,GEO,Georgia
-242,tempered,tbilisi,GEO,Georgia
-243,tempered,telavi,GEO,Georgia
-244,tempered,aachen,DEU,Germany
-245,tempered,augsburg,DEU,Germany
-246,tempered,bad salzdetfurth,DEU,Germany
-247,tempered,bad schussenried,DEU,Germany
-248,tempered,braunchweig,DEU,Germany
-249,tempered,braunschweig,DEU,Germany
-250,tempered,dortmund,DEU,Germany
-251,tempered,dusseldorf,DEU,Germany
-252,tempered,eckental,DEU,Germany
-253,tempered,furth,DEU,Germany
-254,tempered,germany,DEU,Germany
-255,tempered,halle,DEU,Germany
-256,tempered,hamburg,DEU,Germany
-257,tempered,heilbronn,DEU,Germany
-258,tempered,ismaning,DEU,Germany
-259,tempered,kaarst,DEU,Germany
-260,tempered,kaltenkirchen,DEU,Germany
-261,tempered,kamen,DEU,Germany
-262,tempered,karlsruhe,DEU,Germany
-263,tempered,kassel,DEU,Germany
-264,tempered,koblenz,DEU,Germany
-265,tempered,ludwigshafen,DEU,Germany
-266,tempered,marburg,DEU,Germany
-267,tempered,meerbusch,DEU,Germany
-268,tempered,munich,DEU,Germany
-269,tempered,nussloch,DEU,Germany
-270,tempered,oberstaufen,DEU,Germany
-271,tempered,pullach,DEU,Germany
-272,tempered,saarlouis,DEU,Germany
-273,tempered,stuttgart,DEU,Germany
-274,tempered,trier,DEU,Germany
-275,tempered,troisdorf,DEU,Germany
-276,tempered,ueberlingen,DEU,Germany
-277,tempered,wetzlar,DEU,Germany
-278,tempered,wolfsburg,DEU,Germany
-279,tropical_dry,accra,GHA,Ghana
-280,tempered,athens,GRC,Greece
-281,tempered,greece,GRC,Greece
-282,tempered,heraklion,GRC,Greece
-283,tempered,rhodes,GRC,Greece
-284,tropical_dry,guatemala,GTM,Guatemala
-285,tropical_dry,tiburon,HTI,Haiti
-286,tropical_dry,honduras,HND,Honduras
-287,tempered,balatonalmadi,HUN,Hungary
-288,tempered,budapest,HUN,Hungary
-289,tempered,gyor,HUN,Hungary
-290,tempered,gyula,HUN,Hungary
-291,tempered,hungary,HUN,Hungary
-292,tempered,szekesfehervar,HUN,Hungary
-293,tropical_dry,bangalore,IND,India
-294,tropical_dry,bengaluru,IND,India
-295,tropical_dry,chennai,IND,India
-296,tropical_dry,india,IND,India
-297,tropical_dry,indore,IND,India
-298,tropical_dry,kolkata,IND,India
-299,tropical_dry,new delhi,IND,India
-300,tropical_dry,pune,IND,India
-301,tropical_dry,indonesia,IDN,Indonesia
-302,tropical_dry,jakarta,IDN,Indonesia
-303,tropical_dry,iran,Iran,Iran
-304,tempered,dublin,IRL,Ireland
-305,tempered,ireland,IRL,Ireland
-306,tropical_dry,israel,ISR,Israel
-307,tropical_dry,jerusalem,ISR,Israel
-308,tropical_dry,kiryat shmona,ISR,Israel
-309,tropical_dry,netanya,ISR,Israel
-310,tropical_dry,raanana,ISR,Israel
-311,tropical_dry,ramat hasharon,ISR,Israel
-312,tropical_dry,sajur,ISR,Israel
-313,tropical_dry,tel aviv,ISR,Israel
-314,tempered,alessandria,ITA,Italy
-315,tempered,andria,ITA,Italy
-316,tempered,appiano,ITA,Italy
-317,tempered,barletta,ITA,Italy
-318,tempered,bergamo,ITA,Italy
-319,tempered,biella,ITA,Italy
-320,tempered,bolzano,ITA,Italy
-321,tempered,brescia,ITA,Italy
-322,tempered,caltanissetta,ITA,Italy
-323,tempered,casale monferrato,ITA,Italy
-324,tempered,casinalbo,ITA,Italy
-325,tempered,como,ITA,Italy
-326,tempered,cordenons,ITA,Italy
-327,tempered,cortina,ITA,Italy
-328,tempered,courmayeur,ITA,Italy
-329,tempered,cremona,ITA,Italy
-330,tempered,cuneo,ITA,Italy
-331,tempered,fano,ITA,Italy
-332,tempered,florence,ITA,Italy
-333,tempered,francavilla mare,ITA,Italy
-334,tempered,genova,ITA,Italy
-335,tempered,gubbio,ITA,Italy
-336,tempered,italy,ITA,Italy
-337,tempered,laquila,ITA,Italy
-338,tempered,manerbio,ITA,Italy
-339,tempered,manta,ITA,Italy
-340,tempered,mestre,ITA,Italy
-341,tempered,milan,ITA,Italy
-342,tempered,monza,ITA,Italy
-343,tempered,naples,ITA,Italy
-344,tempered,napoli,ITA,Italy
-345,tempered,next gen finals,ITA,Italy
-346,tempered,orbetello,ITA,Italy
-347,tempered,ortisei,ITA,Italy
-348,tempered,padova,ITA,Italy
-349,tempered,palermo,ITA,Italy
-350,tempered,palmanova,ITA,Italy
-351,tempered,parma,ITA,Italy
-352,tempered,perugia,ITA,Italy
-353,tempered,piombino,ITA,Italy
-354,tempered,pontedera,ITA,Italy
-355,tempered,recanati,ITA,Italy
-356,tempered,reggio emilia,ITA,Italy
-357,tempered,rimini,ITA,Italy
-358,tempered,rome,ITA,Italy
-359,tempered,rome masters,ITA,Italy
-360,tempered,san benedetto,ITA,Italy
-361,tempered,san benedetto del tronto,ITA,Italy
-362,tempered,santa cristina val gardena,ITA,Italy
-363,tempered,santa margherita pula,ITA,Italy
-364,tempered,todi,ITA,Italy
-365,tempered,torino,ITA,Italy
-366,tempered,trani,ITA,Italy
-367,tempered,trento,ITA,Italy
-368,tempered,trieste,ITA,Italy
-369,tempered,turin,ITA,Italy
-370,tempered,vercelli,ITA,Italy
-371,tempered,vicenza,ITA,Italy
-372,tempered,akishima,JPN,Japan
-373,tempered,japan,JPN,Japan
-374,tempered,karuizawa,JPN,Japan
-375,tempered,kashiwa,JPN,Japan
-376,tempered,kobe,JPN,Japan
-377,tempered,kofu,JPN,Japan
-378,tempered,kyoto,JPN,Japan
-379,tempered,matsuyama,JPN,Japan
-380,tempered,nishi tama,JPN,Japan
-381,tempered,nishi tokyo,JPN,Japan
-382,tempered,tokyo,JPN,Japan
-383,tempered,toyota,JPN,Japan
-384,tempered,tsukuba,JPN,Japan
-385,tempered,yokkaichi,JPN,Japan
-386,tempered,yokohama,JPN,Japan
-387,tempered,jersey,JEY,Jersey
-388,tropical_dry,aktobe,KAZ,Kazakhstan
-389,tropical_dry,almaty,KAZ,Kazakhstan
-390,tropical_dry,astana,KAZ,Kazakhstan
-391,tropical_dry,kazakhstan,KAZ,Kazakhstan
-392,tropical_dry,nursultan,KAZ,Kazakhstan
-393,tropical_dry,shymkent,KAZ,Kazakhstan
-394,tropical_dry,ust kamenogorsk,KAZ,Kazakhstan
-395,tempered,anseong,KOR,"Korea, Republic of"
-396,tempered,busan,KOR,"Korea, Republic of"
-397,tempered,changwon,KOR,"Korea, Republic of"
-398,tempered,daegu,KOR,"Korea, Republic of"
-399,tempered,gimcheon,KOR,"Korea, Republic of"
-400,tempered,gwangju,KOR,"Korea, Republic of"
-401,tempered,korea,KOR,"Korea, Republic of"
-402,tempered,seoul,KOR,"Korea, Republic of"
-403,tempered,yeongwol,KOR,"Korea, Republic of"
-404,tropical_dry,kuwait,KWT,Kuwait
-405,tropical_dry,laos,LAO,Lao People's Democratic Republic
-406,tempered,latvia,LVA,Latvia
-407,tropical_dry,jounieh,LBN,Lebanon
-408,tropical_dry,lebanon,LBN,Lebanon
-409,tropical_dry,meshref,LBN,Lebanon
-410,tempered,lithuania,LTU,Lithuania
-411,tempered,vilnius,LTU,Lithuania
-412,tempered,petange,LUX,Luxembourg
-413,tropical_dry,kuala lumpur,MYS,Malaysia
-414,tropical_dry,malaysia,MYS,Malaysia
-415,tropical_dry,acapulco,MEX,Mexico
-416,tropical_dry,aguascalientes,MEX,Mexico
-417,tropical_dry,cabo san lucas,MEX,Mexico
-418,tropical_dry,cancun,MEX,Mexico
-419,tropical_dry,cuernavaca,MEX,Mexico
-420,tropical_dry,guadalajara,MEX,Mexico
-421,tropical_dry,los cabos,MEX,Mexico
-422,tropical_dry,mexico,MEX,Mexico
-423,tropical_dry,mexico city,MEX,Mexico
-424,tropical_dry,monterrey,MEX,Mexico
-425,tropical_dry,morelos,MEX,Mexico
-426,tropical_dry,puebla,MEX,Mexico
-427,tropical_dry,puerto vallarta,MEX,Mexico
-428,tropical_dry,rio janeiro,MEX,Mexico
-429,tropical_dry,roland garros,MEX,Mexico
-430,tropical_dry,san luis potosi,MEX,Mexico
-431,tropical_dry,villa allende,MEX,Mexico
-432,tempered,monte carlo masters,MCO,Monaco
-433,tropical_dry,agadir,MAR,Morocco
-434,tropical_dry,casablanca,MAR,Morocco
-435,tropical_dry,kenitra,MAR,Morocco
-436,tropical_dry,marrakech,MAR,Morocco
-437,tropical_dry,meknes,MAR,Morocco
-438,tropical_dry,mohammedia,MAR,Morocco
-439,tropical_dry,morocco,MAR,Morocco
-440,tropical_dry,rabat,MAR,Morocco
-441,tropical_dry,tanger,MAR,Morocco
-442,tropical_dry,maputo,MOZ,Mozambique
-443,tropical_dry,mozambique,MOZ,Mozambique
-444,tempered,alkmaar,NLD,Netherlands
-445,tempered,alphen,NLD,Netherlands
-446,tempered,alphen aan den rijn,NLD,Netherlands
-447,tempered,amersfoort,NLD,Netherlands
-448,tempered,den haag,NLD,Netherlands
-449,tempered,haren,NLD,Netherlands
-450,tempered,netherlands,NLD,Netherlands
-451,tempered,oldenzaal,NLD,Netherlands
-452,tempered,rotterdam,NLD,Netherlands
-453,tempered,scheveningen,NLD,Netherlands
-454,tempered,shertogenbosch,NLD,Netherlands
-455,tropical_dry,noumea,NCL,New Caledonia
-456,tropical_dry,auckland,NZL,New Zealand
-457,tropical_dry,new zealand,NZL,New Zealand
-458,tropical_dry,nicaragua,NIC,Nicaragua
-459,tropical_dry,abuja,NGA,Nigeria
-460,tropical_dry,akko,NGA,Nigeria
-461,tropical_dry,lagos,NGA,Nigeria
-462,tropical_dry,nigeria,NGA,Nigeria
-463,tempered,macedonia,MKD,North Macedonia
-464,tempered,norway,NOR,Norway
-465,tempered,oslo,NOR,Norway
-466,tropical_dry,pakistan,PAK,Pakistan
-467,tropical_dry,belem,PSE,"Palestine, State of"
-468,tropical_dry,chitre,PAN,Panama
-469,tropical_dry,panama,PAN,Panama
-470,tropical_dry,panama city,PAN,Panama
-471,tropical_dry,asuncion,PRY,Paraguay
-472,tropical_dry,lambare,PRY,Paraguay
-473,tropical_dry,paraguay,PRY,Paraguay
-474,tropical_dry,junin,PER,Peru
-475,tropical_dry,lima,PER,Peru
-476,tropical_dry,peru,PER,Peru
-477,tropical_dry,manila,PHL,Philippines
-478,tropical_dry,philippines,PHL,Philippines
-479,tropical_dry,shanghai masters,PHL,Philippines
-480,tempered,bydgoszcz,POL,Poland
-481,tempered,bytom,POL,Poland
-482,tempered,koszalin,POL,Poland
-483,tempered,open,POL,Poland
-484,tempered,poland,POL,Poland
-485,tempered,poznan,POL,Poland
-486,tempered,sopot,POL,Poland
-487,tempered,szczecin,POL,Poland
-488,tempered,wroclaw,POL,Poland
-489,tempered,braga,PRT,Portugal
-490,tempered,castelo branco,PRT,Portugal
-491,tempered,estoril,PRT,Portugal
-492,tempered,guimaraes,PRT,Portugal
-493,tempered,idanha nova,PRT,Portugal
-494,tempered,lisboa,PRT,Portugal
-495,tempered,lisbon,PRT,Portugal
-496,tempered,loule,PRT,Portugal
-497,tempered,maia,PRT,Portugal
-498,tempered,oliveira azemeis,PRT,Portugal
-499,tempered,portimao,PRT,Portugal
-500,tempered,porto,PRT,Portugal
-501,tempered,portugal,PRT,Portugal
-502,tempered,sao bras alportel,PRT,Portugal
-503,tempered,setubal,PRT,Portugal
-504,tempered,sintra,PRT,Portugal
-505,tempered,tavira,PRT,Portugal
-506,tropical_dry,doha,QAT,Qatar
-507,tropical_dry,qatar,QAT,Qatar
-508,tropical_dry,quatar,QAT,Qatar
-509,tempered,arad,ROU,Romania
-510,tempered,bacau,ROU,Romania
-511,tempered,brasov,ROU,Romania
-512,tempered,bucharest,ROU,Romania
-513,tempered,chitila,ROU,Romania
-514,tempered,curtea arges,ROU,Romania
-515,tempered,pitesti,ROU,Romania
-516,tempered,romania,ROU,Romania
-517,tempered,sibiu,ROU,Romania
-518,tempered,targu mures,ROU,Romania
-519,tempered,timisoara,ROU,Romania
-520,tempered,kazan,RUS,Russian Federation
-521,tempered,lermontov,RUS,Russian Federation
-522,tempered,moscow,RUS,Russian Federation
-523,tempered,penza,RUS,Russian Federation
-524,tempered,russia,RUS,Russian Federation
-525,tempered,saransk,RUS,Russian Federation
-526,tempered,st petersburg,RUS,Russian Federation
-527,tempered,stpetersburg,RUS,Russian Federation
-528,tempered,tyumen,RUS,Russian Federation
-529,tropical_dry,rwanda,RWA,Rwanda
-530,tempered,san marino,SMR,San Marino
-531,tropical_dry,saudi arabia,SAU,Saudi Arabia
-532,tropical_dry,senegal,SEN,Senegal
-533,tempered,belgrade,SRB,Serbia
-534,tempered,novi sad,SRB,Serbia
-535,tempered,serbia,SRB,Serbia
-536,tempered,zlatibor,SRB,Serbia
-537,tropical_dry,singapore,SGP,Singapore
-538,tempered,bratislava,SVK,Slovakia
-539,tempered,kosice,SVK,Slovakia
-540,tempered,piestany,SVK,Slovakia
-541,tempered,poprad,SVK,Slovakia
-542,tempered,poprad tatry,SVK,Slovakia
-543,tempered,popradtatry,SVK,Slovakia
-544,tempered,slovak rep,SVK,Slovakia
-545,tempered,slovak republic,SVK,Slovakia
-546,tempered,slovakia,SVK,Slovakia
-547,tempered,trnava,SVK,Slovakia
-548,tempered,ljubljana,SVN,Slovenia
-549,tempered,portoroz,SVN,Slovenia
-550,tempered,slovenia,SVN,Slovenia
-551,tropical_dry,johannesburg,ZAF,South Africa
-552,tropical_dry,pretoria,ZAF,South Africa
-553,tropical_dry,south africa,ZAF,South Africa
-554,tempered,alicante,ESP,Spain
-555,tempered,bakio,ESP,Spain
-556,tempered,barcelona,ESP,Spain
-557,tempered,benicarlo,ESP,Spain
-558,tempered,denia,ESP,Spain
-559,tempered,donostia san sebastian,ESP,Spain
-560,tempered,gandia,ESP,Spain
-561,tempered,getafe madrid,ESP,Spain
-562,tempered,getxo,ESP,Spain
-563,tempered,huelva,ESP,Spain
-564,tempered,las palmas gran canaria,ESP,Spain
-565,tempered,madrid,ESP,Spain
-566,tempered,madrid masters,ESP,Spain
-567,tempered,majadahonda,ESP,Spain
-568,tempered,mallorca,ESP,Spain
-569,tempered,manacor,ESP,Spain
-570,tempered,marbella,ESP,Spain
-571,tempered,martos,ESP,Spain
-572,tempered,melilla,ESP,Spain
-573,tempered,murcia,ESP,Spain
-574,tempered,nules,ESP,Spain
-575,tempered,oviedo,ESP,Spain
-576,tempered,palma del rio,ESP,Spain
-577,tempered,pozoblanco,ESP,Spain
-578,tempered,reus,ESP,Spain
-579,tempered,ribaroja turia,ESP,Spain
-580,tempered,sabadell,ESP,Spain
-581,tempered,san sebastian,ESP,Spain
-582,tempered,santa cruz sierra,ESP,Spain
-583,tempered,santander,ESP,Spain
-584,tempered,segovia,ESP,Spain
-585,tempered,sevilla,ESP,Spain
-586,tempered,seville,ESP,Spain
-587,tempered,spain,ESP,Spain
-588,tempered,spain lanzarote,ESP,Spain
-589,tempered,spain tenerife,ESP,Spain
-590,tempered,tarragona,ESP,Spain
-591,tempered,telde gran canaria,ESP,Spain
-592,tempered,valencia,ESP,Spain
-593,tempered,valldoreix,ESP,Spain
-594,tempered,vigo,ESP,Spain
-595,tempered,villena,ESP,Spain
-596,tempered,xativa,ESP,Spain
-597,tropical_dry,sri lanka,LKA,Sri Lanka
-598,tropical_dry,sudan,SDN,Sudan
-599,tempered,bastad,SWE,Sweden
-600,tempered,falun,SWE,Sweden
-601,tempered,jonkoping,SWE,Sweden
-602,tempered,kalmar,SWE,Sweden
-603,tempered,karlskrona,SWE,Sweden
-604,tempered,stockholm,SWE,Sweden
-605,tempered,sweden,SWE,Sweden
-606,tempered,ystad,SWE,Sweden
-607,tempered,basel,CHE,Switzerland
-608,tempered,geneva,CHE,Switzerland
-609,tempered,gstaad,CHE,Switzerland
-610,tempered,horgen,CHE,Switzerland
-611,tempered,lugano,CHE,Switzerland
-612,tempered,oberentfelden,CHE,Switzerland
-613,tempered,schlieren,CHE,Switzerland
-614,tempered,switzerland,CHE,Switzerland
-615,tropical_dry,chinese taipei,TWN,"Taiwan, Province of China"
-616,tropical_dry,kaohsiung,TWN,"Taiwan, Province of China"
-617,tropical_dry,taipei,TWN,"Taiwan, Province of China"
-618,tropical_dry,bangkok,THA,Thailand
-619,tropical_dry,hua hin,THA,Thailand
-620,tropical_dry,nonthaburi,THA,Thailand
-621,tropical_dry,thailand,THA,Thailand
-622,tropical_dry,togo,TGO,Togo
-623,tropical_dry,monastir,TUN,Tunisia
-624,tropical_dry,tabarka,TUN,Tunisia
-625,tropical_dry,tunis,TUN,Tunisia
-626,tropical_dry,tunisia,TUN,Tunisia
-627,tempered,agri,TUR,Turkey
-628,tempered,antalya,TUR,Turkey
-629,tempered,batman,TUR,Turkey
-630,tempered,eskisehir,TUR,Turkey
-631,tempered,istanbul,TUR,Turkey
-632,tempered,izmir,TUR,Turkey
-633,tempered,mersin,TUR,Turkey
-634,tempered,turkey,TUR,Turkey
-635,tropical_dry,kampala,UGA,Uganda
-636,tropical_dry,uganda,UGA,Uganda
-637,tempered,chornomorsk,UKR,Ukraine
-638,tempered,irpin,UKR,Ukraine
-639,tempered,ukraine,UKR,Ukraine
-640,tropical_dry,dubai,ARE,United Arab Emirates
-641,tropical_dry,united arab emirates,ARE,United Arab Emirates
-642,tempered,barnstaple,GBR,United Kingdom
-643,tempered,bath,GBR,United Kingdom
-644,tempered,bolton,GBR,United Kingdom
-645,tempered,chiswick,GBR,United Kingdom
-646,tempered,eastbourne,GBR,United Kingdom
-647,tempered,glasgow,GBR,United Kingdom
-648,tempered,great britain,GBR,United Kingdom
-649,tempered,great britain future,GBR,United Kingdom
-650,tempered,ilkley,GBR,United Kingdom
-651,tempered,london,GBR,United Kingdom
-652,tempered,london olympics,GBR,United Kingdom
-653,tempered,loughborough,GBR,United Kingdom
-654,tempered,manchester,GBR,United Kingdom
-655,tempered,nottingham,GBR,United Kingdom
-656,tempered,queens club,GBR,United Kingdom
-657,tempered,roehampton,GBR,United Kingdom
-658,tempered,shrewsbury,GBR,United Kingdom
-659,tempered,sunderland,GBR,United Kingdom
-660,tempered,surbiton,GBR,United Kingdom
-661,tempered,tour finals,GBR,United Kingdom
-662,tempered,weston,GBR,United Kingdom
-663,tempered,wimbledon,GBR,United Kingdom
-664,tempered,aptos,USA,United States
-665,tempered,arcadia,USA,United States
-666,tempered,atlanta,USA,United States
-667,tempered,austin,USA,United States
-668,tempered,bakersfield,USA,United States
-669,tempered,baton rouge,USA,United States
-670,tempered,binghamton,USA,United States
-671,tempered,bradenton,USA,United States
-672,tempered,calabasas,USA,United States
-673,tempered,carson,USA,United States
-674,tempered,cary,USA,United States
-675,tempered,champaign,USA,United States
-676,tempered,champaignurbana,USA,United States
-677,tempered,charlottesville,USA,United States
-678,tempered,chicago,USA,United States
-679,tempered,cincinnati masters,USA,United States
-680,tempered,claremont,USA,United States
-681,tempered,cleveland,USA,United States
-682,tempered,columbus,USA,United States
-683,tempered,dallas,USA,United States
-684,tempered,decatur,USA,United States
-685,tempered,delray beach,USA,United States
-686,tempered,east lansing,USA,United States
-687,tempered,edwardsville,USA,United States
-688,tempered,fairfield,USA,United States
-689,tempered,fayetteville,USA,United States
-690,tempered,fort worth,USA,United States
-691,tempered,guam,USA,United States
-692,tempered,harlingen,USA,United States
-693,tempered,honolulu,USA,United States
-694,tempered,houston,USA,United States
-695,tempered,houstontx,USA,United States
-696,tempered,indian wells,USA,United States
-697,tempered,indian wells masters,USA,United States
-698,tempered,iowa city,USA,United States
-699,tempered,irving,USA,United States
-700,tempered,knoxville,USA,United States
-701,tempered,lahaina,USA,United States
-702,tempered,las vegas,USA,United States
-703,tempered,leon,USA,United States
-704,tempered,lexington,USA,United States
-705,tempered,little rock,USA,United States
-706,tempered,los angeles,USA,United States
-707,tempered,malibu,USA,United States
-708,tempered,maui,USA,United States
-709,tempered,memphis,USA,United States
-710,tempered,miami masters,USA,United States
-711,tempered,napa,USA,United States
-712,tempered,new haven,USA,United States
-713,tempered,new york,USA,United States
-714,tempered,newport,USA,United States
-715,tempered,newport beach,USA,United States
-716,tempered,norman,USA,United States
-717,tempered,ojai,USA,United States
-718,tempered,orange park,USA,United States
-719,tempered,orlando,USA,United States
-720,tempered,palm coast,USA,United States
-721,tempered,paris masters,USA,United States
-722,tempered,pensacola,USA,United States
-723,tempered,phoenix,USA,United States
-724,tempered,pittsburgh,USA,United States
-725,tempered,puerto rico,USA,United States
-726,tempered,rochester,USA,United States
-727,tempered,sacramento,USA,United States
-728,tempered,salinas,USA,United States
-729,tempered,san francisco,USA,United States
-730,tempered,san jose,USA,United States
-731,tempered,san juan,USA,United States
-732,tempered,sarasota,USA,United States
-733,tempered,savannah,USA,United States
-734,tempered,stockton,USA,United States
-735,tempered,sunrise,USA,United States
-736,tempered,tallahassee,USA,United States
-737,tempered,tempe,USA,United States
-738,tempered,tucson,USA,United States
-739,tempered,tulsa,USA,United States
-740,tempered,usa,USA,United States
-741,tempered,usa fa,USA,United States
-742,tempered,usa fb,USA,United States
-743,tempered,vale lobo,USA,United States
-744,tempered,vero beach,USA,United States
-745,tempered,waco,USA,United States
-746,tempered,washington,USA,United States
-747,tempered,west lakes,USA,United States
-748,tempered,wichita,USA,United States
-749,tempered,winnetka,USA,United States
-750,tempered,winston salem,USA,United States
-751,tempered,winstonsalem,USA,United States
-752,tropical_dry,maldonado,URY,Uruguay
-753,tropical_dry,montevideo,URY,Uruguay
-754,tropical_dry,punta del este,URY,Uruguay
-755,tropical_dry,uruguay,URY,Uruguay
-756,tropical_dry,andijan,UZB,Uzbekistan
-757,tropical_dry,bukhara,UZB,Uzbekistan
-758,tropical_dry,fergana,UZB,Uzbekistan
-759,tropical_dry,karshi,UZB,Uzbekistan
-760,tropical_dry,namangan,UZB,Uzbekistan
-761,tropical_dry,samarkand,UZB,Uzbekistan
-762,tropical_dry,tashkent,UZB,Uzbekistan
-763,tropical_dry,uzbekistan,UZB,Uzbekistan
-764,tropical_dry,venezuela,VEN,"Venezuela, Bolivarian Republic of"
-765,tropical_dry,chi minh,VNM,Viet Nam
-766,tropical_dry,chi minh city,VNM,Viet Nam
-767,tropical_dry,copy vietnam,VNM,Viet Nam
-768,tropical_dry,tay ninh,VNM,Viet Nam
-769,tropical_dry,vietnam,VNM,Viet Nam
-770,tropical_dry,harare,ZWE,Zimbabwe
-771,tropical_dry,zimbabwe,ZWE,Zimbabwe
+0,Algeria,algeria,DZA,tropical_dry
+1,Argentina,argentina,ARG,tropical_dry
+2,Argentina,buenos aires,ARG,tropical_dry
+3,Argentina,cordoba,ARG,tropical_dry
+4,Argentina,corrientes,ARG,tropical_dry
+5,Argentina,mendoza,ARG,tropical_dry
+6,Argentina,pinamar,ARG,tropical_dry
+7,Argentina,quinta lago,ARG,tropical_dry
+8,Argentina,san remo,ARG,tropical_dry
+9,Argentina,tigre,ARG,tropical_dry
+10,Armenia,armenia,ARM,tempered
+11,Australia,albury,AUS,tropical_dry
+12,Australia,australia,AUS,tropical_dry
+13,Australia,australian open,AUS,tropical_dry
+14,Australia,brisbane,AUS,tropical_dry
+15,Australia,burnie,AUS,tropical_dry
+16,Australia,cairns,AUS,tropical_dry
+17,Australia,caloundra,AUS,tropical_dry
+18,Australia,canberra,AUS,tropical_dry
+19,Australia,darwin,AUS,tropical_dry
+20,Australia,launceston,AUS,tropical_dry
+21,Australia,melbourne,AUS,tropical_dry
+22,Australia,mildura,AUS,tropical_dry
+23,Australia,mornington,AUS,tropical_dry
+24,Australia,playford,AUS,tropical_dry
+25,Australia,sydney,AUS,tropical_dry
+26,Australia,toowoomba,AUS,tropical_dry
+27,Australia,traralgon,AUS,tropical_dry
+28,Australia,vic,AUS,tropical_dry
+29,Austria,austria,AUT,tempered
+30,Austria,kitzbuhel,AUT,tempered
+31,Austria,kramsach,AUT,tempered
+32,Austria,salzburg,AUT,tempered
+33,Austria,telfs,AUT,tempered
+34,Austria,vienna,AUT,tempered
+35,Austria,vogau,AUT,tempered
+36,Austria,wels,AUT,tempered
+37,Azerbaijan,azerbaijan,AZE,tropical_dry
+38,Bahrain,bahrain,BHR,tropical_dry
+39,Bahrain,manama,BHR,tropical_dry
+40,Belarus,belarus,BLR,tempered
+41,Belarus,minsk,BLR,tempered
+42,Belgium,antwerp,BEL,tempered
+43,Belgium,arlon,BEL,tempered
+44,Belgium,belgium,BEL,tempered
+45,Belgium,belgium moved from july,BEL,tempered
+46,Belgium,bercuit,BEL,tempered
+47,Belgium,brussels,BEL,tempered
+48,Belgium,eupen,BEL,tempered
+49,Belgium,koksijde,BEL,tempered
+50,Belgium,lambermont,BEL,tempered
+51,Belgium,lasne,BEL,tempered
+52,Belgium,mons,BEL,tempered
+53,Belize,rio olympics,BLZ,tropical_dry
+54,"Bolivia, Plurinational State of",bolivia,BOL,tropical_dry
+55,Bosnia and Herzegovina,banja luka,BIH,tempered
+56,Bosnia and Herzegovina,bosnia amp herzegovina,BIH,tempered
+57,Bosnia and Herzegovina,bosnia herzegovina,BIH,tempered
+58,Bosnia and Herzegovina,brcko,BIH,tempered
+59,Bosnia and Herzegovina,doboj,BIH,tempered
+60,Bosnia and Herzegovina,kiseljak,BIH,tempered
+61,Bosnia and Herzegovina,prijedor,BIH,tempered
+62,Bosnia and Herzegovina,sarajevo,BIH,tempered
+63,Brazil,atp challenger tour finals,BRA,tropical_dry
+64,Brazil,baja,BRA,tropical_dry
+65,Brazil,belo horizonte,BRA,tropical_dry
+66,Brazil,blumenau,BRA,tropical_dry
+67,Brazil,brasilia,BRA,tropical_dry
+68,Brazil,brazil,BRA,tropical_dry
+69,Brazil,campinas,BRA,tropical_dry
+70,Brazil,campos jordao,BRA,tropical_dry
+71,Brazil,challenger tour finals,BRA,tropical_dry
+72,Brazil,costa sauipe,BRA,tropical_dry
+73,Brazil,curitiba,BRA,tropical_dry
+74,Brazil,florianopolis,BRA,tropical_dry
+75,Brazil,geogia,BRA,tropical_dry
+76,Brazil,porto alegre,BRA,tropical_dry
+77,Brazil,potro alegre,BRA,tropical_dry
+78,Brazil,recife,BRA,tropical_dry
+79,Brazil,rio quente,BRA,tropical_dry
+80,Brazil,santos,BRA,tropical_dry
+81,Brazil,sao jose rio preto,BRA,tropical_dry
+82,Brazil,sao leopoldo,BRA,tropical_dry
+83,Brazil,sao paulo,BRA,tropical_dry
+84,Bulgaria,bulgaria,BGR,tempered
+85,Bulgaria,burgas,BGR,tempered
+86,Bulgaria,plovdiv,BGR,tempered
+87,Bulgaria,sofia,BGR,tempered
+88,Bulgaria,sozopol,BGR,tempered
+89,Bulgaria,varna,BGR,tempered
+90,Burundi,burundi,BDI,tropical_dry
+91,Cambodia,cambodia,KHM,tropical_dry
+92,Cameroon,cameroon,CMR,tropical_dry
+93,Canada,calgary,CAN,tempered
+94,Canada,canada,CAN,tempered
+95,Canada,canada masters,CAN,tempered
+96,Canada,drummondville,CAN,tempered
+97,Canada,gatineau,CAN,tempered
+98,Canada,granby,CAN,tempered
+99,Canada,happy valley,CAN,tempered
+100,Canada,orleans,CAN,tempered
+101,Canada,rimouski,CAN,tempered
+102,Canada,vancouver,CAN,tempered
+103,Canada,winnipeg,CAN,tempered
+104,Chile,chile,CHL,tropical_dry
+105,Chile,vina del mar,CHL,tropical_dry
+106,China,anning,CHN,tropical_dry
+107,China,baotou,CHN,tropical_dry
+108,China,beijing,CHN,tropical_dry
+109,China,chengdu,CHN,tropical_dry
+110,China,china,CHN,tropical_dry
+111,China,guangzhou,CHN,tropical_dry
+112,China,hengyang,CHN,tropical_dry
+113,China,hong kong,CHN,tropical_dry
+114,China,jinan,CHN,tropical_dry
+115,China,kunming,CHN,tropical_dry
+116,China,kunshan,CHN,tropical_dry
+117,China,liuzhou,CHN,tropical_dry
+118,China,luan,CHN,tropical_dry
+119,China,luzhou,CHN,tropical_dry
+120,China,nanchang,CHN,tropical_dry
+121,China,nang,CHN,tropical_dry
+122,China,nanjing,CHN,tropical_dry
+123,China,ningbo,CHN,tropical_dry
+124,China,pingguo,CHN,tropical_dry
+125,China,qingdao,CHN,tropical_dry
+126,China,quanzhou,CHN,tropical_dry
+127,China,qujing,CHN,tropical_dry
+128,China,shanghai,CHN,tropical_dry
+129,China,shenzhen,CHN,tropical_dry
+130,China,suzhou,CHN,tropical_dry
+131,China,tianjin,CHN,tropical_dry
+132,China,wuhai,CHN,tropical_dry
+133,China,wuhan,CHN,tropical_dry
+134,China,yinchuan,CHN,tropical_dry
+135,China,zhangjiagang,CHN,tropical_dry
+136,China,zhuhai,CHN,tropical_dry
+137,Colombia,barranquilla,COL,tropical_dry
+138,Colombia,bogota,COL,tropical_dry
+139,Colombia,bucaramanga,COL,tropical_dry
+140,Colombia,cali,COL,tropical_dry
+141,Colombia,colombia,COL,tropical_dry
+142,Colombia,floridablanca,COL,tropical_dry
+143,Colombia,medellin,COL,tropical_dry
+144,Colombia,paz,COL,tropical_dry
+145,Colombia,pereira,COL,tropical_dry
+146,Costa Rica,costa rica,CRI,tropical_dry
+147,Costa Rica,santiago,CRI,tropical_dry
+148,Croatia,croatia,HRV,tropical_dry
+149,Croatia,opatija,HRV,tropical_dry
+150,Croatia,porec,HRV,tropical_dry
+151,Croatia,rijeka,HRV,tropical_dry
+152,Croatia,rovinj,HRV,tropical_dry
+153,Croatia,umag,HRV,tropical_dry
+154,Croatia,zagreb,HRV,tropical_dry
+155,Cuba,cuba fugures,CUB,tropical_dry
+156,Cyprus,cyprus,CYP,tropical_dry
+157,Czechia,czech republic,CZE,tempered
+158,Czechia,jablonec nad nisou,CZE,tempered
+159,Czechia,liberec,CZE,tempered
+160,Czechia,milovice,CZE,tempered
+161,Czechia,most,CZE,tempered
+162,Czechia,olomouc,CZE,tempered
+163,Czechia,opava,CZE,tempered
+164,Czechia,ostrava,CZE,tempered
+165,Czechia,pardubice,CZE,tempered
+166,Czechia,prague,CZE,tempered
+167,Czechia,prostejov,CZE,tempered
+168,Czechia,ricany,CZE,tempered
+169,Denmark,denmark,DNK,tempered
+170,Dominican Republic,dominican republic,DOM,tropical_dry
+171,Dominican Republic,santo domingo,DOM,tropical_dry
+172,Ecuador,ecuador,ECU,tropical_dry
+173,Ecuador,guayaquil,ECU,tropical_dry
+174,Ecuador,portoviejo,ECU,tropical_dry
+175,Ecuador,quito,ECU,tropical_dry
+176,Egypt,cairo,EGY,tropical_dry
+177,Egypt,egypt,EGY,tropical_dry
+178,Egypt,sharm sheikh,EGY,tropical_dry
+179,El Salvador,salvador,SLV,tropical_dry
+180,El Salvador,santa tecla,SLV,tropical_dry
+181,Estonia,estonia,EST,tempered
+182,Estonia,parnu,EST,tempered
+183,Faroe Islands,faro,FRO,tempered
+184,Finland,finland,FIN,tempered
+185,Finland,helsinki,FIN,tempered
+186,Finland,pajulahti,FIN,tempered
+187,Finland,tampere,FIN,tempered
+188,France,aix provence,FRA,tempered
+189,France,ajaccio,FRA,tempered
+190,France,angers,FRA,tempered
+191,France,bagneres bigorre,FRA,tempered
+192,France,bagnoles lorne,FRA,tempered
+193,France,blois,FRA,tempered
+194,France,bordeaux,FRA,tempered
+195,France,bourg bresse,FRA,tempered
+196,France,bressuire,FRA,tempered
+197,France,brest,FRA,tempered
+198,France,brieuc,FRA,tempered
+199,France,cassis,FRA,tempered
+200,France,cherbourg,FRA,tempered
+201,France,forbach,FRA,tempered
+202,France,france,FRA,tempered
+203,France,france rodez,FRA,tempered
+204,France,gosier,FRA,tempered
+205,France,grasse,FRA,tempered
+206,France,grenoble,FRA,tempered
+207,France,lille,FRA,tempered
+208,France,lyon,FRA,tempered
+209,France,marsa,FRA,tempered
+210,France,marseille,FRA,tempered
+211,France,metz,FRA,tempered
+212,France,montauban,FRA,tempered
+213,France,montpellier,FRA,tempered
+214,France,mouilleron captif,FRA,tempered
+215,France,mouilleronlecaptif,FRA,tempered
+216,France,mulhouse,FRA,tempered
+217,France,nevers,FRA,tempered
+218,France,nice,FRA,tempered
+219,France,pau,FRA,tempered
+220,France,plaisir,FRA,tempered
+221,France,poitiers,FRA,tempered
+222,France,quimper,FRA,tempered
+223,France,remy,FRA,tempered
+224,France,remy provence,FRA,tempered
+225,France,rennes,FRA,tempered
+226,France,reunion island,FRA,tempered
+227,France,rodez,FRA,tempered
+228,France,saint brieuc,FRA,tempered
+229,France,saint dizier,FRA,tempered
+230,France,sarreguemines,FRA,tempered
+231,France,sophia antipolis,FRA,tempered
+232,France,st brieuc,FRA,tempered
+233,France,st remy,FRA,tempered
+234,France,stbrieuc,FRA,tempered
+235,France,toulouse,FRA,tempered
+236,France,troyes,FRA,tempered
+237,France,uriage,FRA,tempered
+238,France,veigy foncenex,FRA,tempered
+239,France,villers les nancy,FRA,tempered
+240,Gabon,gabon,GAB,tropical_dry
+241,Georgia,georgia,GEO,tempered
+242,Georgia,tbilisi,GEO,tempered
+243,Georgia,telavi,GEO,tempered
+244,Germany,aachen,DEU,tempered
+245,Germany,augsburg,DEU,tempered
+246,Germany,bad salzdetfurth,DEU,tempered
+247,Germany,bad schussenried,DEU,tempered
+248,Germany,braunchweig,DEU,tempered
+249,Germany,braunschweig,DEU,tempered
+250,Germany,dortmund,DEU,tempered
+251,Germany,dusseldorf,DEU,tempered
+252,Germany,eckental,DEU,tempered
+253,Germany,furth,DEU,tempered
+254,Germany,germany,DEU,tempered
+255,Germany,halle,DEU,tempered
+256,Germany,hamburg,DEU,tempered
+257,Germany,heilbronn,DEU,tempered
+258,Germany,ismaning,DEU,tempered
+259,Germany,kaarst,DEU,tempered
+260,Germany,kaltenkirchen,DEU,tempered
+261,Germany,kamen,DEU,tempered
+262,Germany,karlsruhe,DEU,tempered
+263,Germany,kassel,DEU,tempered
+264,Germany,koblenz,DEU,tempered
+265,Germany,ludwigshafen,DEU,tempered
+266,Germany,marburg,DEU,tempered
+267,Germany,meerbusch,DEU,tempered
+268,Germany,munich,DEU,tempered
+269,Germany,nussloch,DEU,tempered
+270,Germany,oberstaufen,DEU,tempered
+271,Germany,pullach,DEU,tempered
+272,Germany,saarlouis,DEU,tempered
+273,Germany,stuttgart,DEU,tempered
+274,Germany,trier,DEU,tempered
+275,Germany,troisdorf,DEU,tempered
+276,Germany,ueberlingen,DEU,tempered
+277,Germany,wetzlar,DEU,tempered
+278,Germany,wolfsburg,DEU,tempered
+279,Ghana,accra,GHA,tropical_dry
+280,Greece,athens,GRC,tempered
+281,Greece,greece,GRC,tempered
+282,Greece,heraklion,GRC,tempered
+283,Greece,rhodes,GRC,tempered
+284,Guatemala,guatemala,GTM,tropical_dry
+285,Haiti,tiburon,HTI,tropical_dry
+286,Honduras,honduras,HND,tropical_dry
+287,Hungary,balatonalmadi,HUN,tempered
+288,Hungary,budapest,HUN,tempered
+289,Hungary,gyor,HUN,tempered
+290,Hungary,gyula,HUN,tempered
+291,Hungary,hungary,HUN,tempered
+292,Hungary,szekesfehervar,HUN,tempered
+293,India,bangalore,IND,tropical_dry
+294,India,bengaluru,IND,tropical_dry
+295,India,chennai,IND,tropical_dry
+296,India,india,IND,tropical_dry
+297,India,indore,IND,tropical_dry
+298,India,kolkata,IND,tropical_dry
+299,India,new delhi,IND,tropical_dry
+300,India,pune,IND,tropical_dry
+301,Indonesia,indonesia,IDN,tropical_dry
+302,Indonesia,jakarta,IDN,tropical_dry
+303,Iran,iran,Iran,tropical_dry
+304,Ireland,dublin,IRL,tempered
+305,Ireland,ireland,IRL,tempered
+306,Israel,israel,ISR,tropical_dry
+307,Israel,jerusalem,ISR,tropical_dry
+308,Israel,kiryat shmona,ISR,tropical_dry
+309,Israel,netanya,ISR,tropical_dry
+310,Israel,raanana,ISR,tropical_dry
+311,Israel,ramat hasharon,ISR,tropical_dry
+312,Israel,sajur,ISR,tropical_dry
+313,Israel,tel aviv,ISR,tropical_dry
+314,Italy,alessandria,ITA,tempered
+315,Italy,andria,ITA,tempered
+316,Italy,appiano,ITA,tempered
+317,Italy,barletta,ITA,tempered
+318,Italy,bergamo,ITA,tempered
+319,Italy,biella,ITA,tempered
+320,Italy,bolzano,ITA,tempered
+321,Italy,brescia,ITA,tempered
+322,Italy,caltanissetta,ITA,tempered
+323,Italy,casale monferrato,ITA,tempered
+324,Italy,casinalbo,ITA,tempered
+325,Italy,como,ITA,tempered
+326,Italy,cordenons,ITA,tempered
+327,Italy,cortina,ITA,tempered
+328,Italy,courmayeur,ITA,tempered
+329,Italy,cremona,ITA,tempered
+330,Italy,cuneo,ITA,tempered
+331,Italy,fano,ITA,tempered
+332,Italy,florence,ITA,tempered
+333,Italy,francavilla mare,ITA,tempered
+334,Italy,genova,ITA,tempered
+335,Italy,gubbio,ITA,tempered
+336,Italy,italy,ITA,tempered
+337,Italy,laquila,ITA,tempered
+338,Italy,manerbio,ITA,tempered
+339,Italy,manta,ITA,tempered
+340,Italy,mestre,ITA,tempered
+341,Italy,milan,ITA,tempered
+342,Italy,monza,ITA,tempered
+343,Italy,naples,ITA,tempered
+344,Italy,napoli,ITA,tempered
+345,Italy,next gen finals,ITA,tempered
+346,Italy,orbetello,ITA,tempered
+347,Italy,ortisei,ITA,tempered
+348,Italy,padova,ITA,tempered
+349,Italy,palermo,ITA,tempered
+350,Italy,palmanova,ITA,tempered
+351,Italy,parma,ITA,tempered
+352,Italy,perugia,ITA,tempered
+353,Italy,piombino,ITA,tempered
+354,Italy,pontedera,ITA,tempered
+355,Italy,recanati,ITA,tempered
+356,Italy,reggio emilia,ITA,tempered
+357,Italy,rimini,ITA,tempered
+358,Italy,rome,ITA,tempered
+359,Italy,rome masters,ITA,tempered
+360,Italy,san benedetto,ITA,tempered
+361,Italy,san benedetto del tronto,ITA,tempered
+362,Italy,santa cristina val gardena,ITA,tempered
+363,Italy,santa margherita pula,ITA,tempered
+364,Italy,todi,ITA,tempered
+365,Italy,torino,ITA,tempered
+366,Italy,trani,ITA,tempered
+367,Italy,trento,ITA,tempered
+368,Italy,trieste,ITA,tempered
+369,Italy,turin,ITA,tempered
+370,Italy,vercelli,ITA,tempered
+371,Italy,vicenza,ITA,tempered
+372,Japan,akishima,JPN,tempered
+373,Japan,japan,JPN,tempered
+374,Japan,karuizawa,JPN,tempered
+375,Japan,kashiwa,JPN,tempered
+376,Japan,kobe,JPN,tempered
+377,Japan,kofu,JPN,tempered
+378,Japan,kyoto,JPN,tempered
+379,Japan,matsuyama,JPN,tempered
+380,Japan,nishi tama,JPN,tempered
+381,Japan,nishi tokyo,JPN,tempered
+382,Japan,tokyo,JPN,tempered
+383,Japan,toyota,JPN,tempered
+384,Japan,tsukuba,JPN,tempered
+385,Japan,yokkaichi,JPN,tempered
+386,Japan,yokohama,JPN,tempered
+387,Jersey,jersey,JEY,tempered
+388,Kazakhstan,aktobe,KAZ,tropical_dry
+389,Kazakhstan,almaty,KAZ,tropical_dry
+390,Kazakhstan,astana,KAZ,tropical_dry
+391,Kazakhstan,kazakhstan,KAZ,tropical_dry
+392,Kazakhstan,nursultan,KAZ,tropical_dry
+393,Kazakhstan,shymkent,KAZ,tropical_dry
+394,Kazakhstan,ust kamenogorsk,KAZ,tropical_dry
+395,"Korea, Republic of",anseong,KOR,tempered
+396,"Korea, Republic of",busan,KOR,tempered
+397,"Korea, Republic of",changwon,KOR,tempered
+398,"Korea, Republic of",daegu,KOR,tempered
+399,"Korea, Republic of",gimcheon,KOR,tempered
+400,"Korea, Republic of",gwangju,KOR,tempered
+401,"Korea, Republic of",korea,KOR,tempered
+402,"Korea, Republic of",seoul,KOR,tempered
+403,"Korea, Republic of",yeongwol,KOR,tempered
+404,Kuwait,kuwait,KWT,tropical_dry
+405,Lao People's Democratic Republic,laos,LAO,tropical_dry
+406,Latvia,latvia,LVA,tempered
+407,Lebanon,jounieh,LBN,tropical_dry
+408,Lebanon,lebanon,LBN,tropical_dry
+409,Lebanon,meshref,LBN,tropical_dry
+410,Lithuania,lithuania,LTU,tempered
+411,Lithuania,vilnius,LTU,tempered
+412,Luxembourg,petange,LUX,tempered
+413,Malaysia,kuala lumpur,MYS,tropical_dry
+414,Malaysia,malaysia,MYS,tropical_dry
+415,Mexico,acapulco,MEX,tropical_dry
+416,Mexico,aguascalientes,MEX,tropical_dry
+417,Mexico,cabo san lucas,MEX,tropical_dry
+418,Mexico,cancun,MEX,tropical_dry
+419,Mexico,cuernavaca,MEX,tropical_dry
+420,Mexico,guadalajara,MEX,tropical_dry
+421,Mexico,los cabos,MEX,tropical_dry
+422,Mexico,mexico,MEX,tropical_dry
+423,Mexico,mexico city,MEX,tropical_dry
+424,Mexico,monterrey,MEX,tropical_dry
+425,Mexico,morelos,MEX,tropical_dry
+426,Mexico,puebla,MEX,tropical_dry
+427,Mexico,puerto vallarta,MEX,tropical_dry
+428,Mexico,rio janeiro,MEX,tropical_dry
+429,Mexico,roland garros,MEX,tropical_dry
+430,Mexico,san luis potosi,MEX,tropical_dry
+431,Mexico,villa allende,MEX,tropical_dry
+432,Monaco,monte carlo masters,MCO,tempered
+433,Morocco,agadir,MAR,tropical_dry
+434,Morocco,casablanca,MAR,tropical_dry
+435,Morocco,kenitra,MAR,tropical_dry
+436,Morocco,marrakech,MAR,tropical_dry
+437,Morocco,meknes,MAR,tropical_dry
+438,Morocco,mohammedia,MAR,tropical_dry
+439,Morocco,morocco,MAR,tropical_dry
+440,Morocco,rabat,MAR,tropical_dry
+441,Morocco,tanger,MAR,tropical_dry
+442,Mozambique,maputo,MOZ,tropical_dry
+443,Mozambique,mozambique,MOZ,tropical_dry
+444,Netherlands,alkmaar,NLD,tempered
+445,Netherlands,alphen,NLD,tempered
+446,Netherlands,alphen aan den rijn,NLD,tempered
+447,Netherlands,amersfoort,NLD,tempered
+448,Netherlands,den haag,NLD,tempered
+449,Netherlands,haren,NLD,tempered
+450,Netherlands,netherlands,NLD,tempered
+451,Netherlands,oldenzaal,NLD,tempered
+452,Netherlands,rotterdam,NLD,tempered
+453,Netherlands,scheveningen,NLD,tempered
+454,Netherlands,shertogenbosch,NLD,tempered
+455,New Caledonia,noumea,NCL,tropical_dry
+456,New Zealand,auckland,NZL,tropical_dry
+457,New Zealand,new zealand,NZL,tropical_dry
+458,Nicaragua,nicaragua,NIC,tropical_dry
+459,Nigeria,abuja,NGA,tropical_dry
+460,Nigeria,akko,NGA,tropical_dry
+461,Nigeria,lagos,NGA,tropical_dry
+462,Nigeria,nigeria,NGA,tropical_dry
+463,North Macedonia,macedonia,MKD,tempered
+464,Norway,norway,NOR,tempered
+465,Norway,oslo,NOR,tempered
+466,Pakistan,pakistan,PAK,tropical_dry
+467,"Palestine, State of",belem,PSE,tropical_dry
+468,Panama,chitre,PAN,tropical_dry
+469,Panama,panama,PAN,tropical_dry
+470,Panama,panama city,PAN,tropical_dry
+471,Paraguay,asuncion,PRY,tropical_dry
+472,Paraguay,lambare,PRY,tropical_dry
+473,Paraguay,paraguay,PRY,tropical_dry
+474,Peru,junin,PER,tropical_dry
+475,Peru,lima,PER,tropical_dry
+476,Peru,peru,PER,tropical_dry
+477,Philippines,manila,PHL,tropical_dry
+478,Philippines,philippines,PHL,tropical_dry
+479,Philippines,shanghai masters,PHL,tropical_dry
+480,Poland,bydgoszcz,POL,tempered
+481,Poland,bytom,POL,tempered
+482,Poland,koszalin,POL,tempered
+483,Poland,open,POL,tempered
+484,Poland,poland,POL,tempered
+485,Poland,poznan,POL,tempered
+486,Poland,sopot,POL,tempered
+487,Poland,szczecin,POL,tempered
+488,Poland,wroclaw,POL,tempered
+489,Portugal,braga,PRT,tempered
+490,Portugal,castelo branco,PRT,tempered
+491,Portugal,estoril,PRT,tempered
+492,Portugal,guimaraes,PRT,tempered
+493,Portugal,idanha nova,PRT,tempered
+494,Portugal,lisboa,PRT,tempered
+495,Portugal,lisbon,PRT,tempered
+496,Portugal,loule,PRT,tempered
+497,Portugal,maia,PRT,tempered
+498,Portugal,oliveira azemeis,PRT,tempered
+499,Portugal,portimao,PRT,tempered
+500,Portugal,porto,PRT,tempered
+501,Portugal,portugal,PRT,tempered
+502,Portugal,sao bras alportel,PRT,tempered
+503,Portugal,setubal,PRT,tempered
+504,Portugal,sintra,PRT,tempered
+505,Portugal,tavira,PRT,tempered
+506,Qatar,doha,QAT,tropical_dry
+507,Qatar,qatar,QAT,tropical_dry
+508,Qatar,quatar,QAT,tropical_dry
+509,Romania,arad,ROU,tempered
+510,Romania,bacau,ROU,tempered
+511,Romania,brasov,ROU,tempered
+512,Romania,bucharest,ROU,tempered
+513,Romania,chitila,ROU,tempered
+514,Romania,curtea arges,ROU,tempered
+515,Romania,pitesti,ROU,tempered
+516,Romania,romania,ROU,tempered
+517,Romania,sibiu,ROU,tempered
+518,Romania,targu mures,ROU,tempered
+519,Romania,timisoara,ROU,tempered
+520,Russian Federation,kazan,RUS,tempered
+521,Russian Federation,lermontov,RUS,tempered
+522,Russian Federation,moscow,RUS,tempered
+523,Russian Federation,penza,RUS,tempered
+524,Russian Federation,russia,RUS,tempered
+525,Russian Federation,saransk,RUS,tempered
+526,Russian Federation,st petersburg,RUS,tempered
+527,Russian Federation,stpetersburg,RUS,tempered
+528,Russian Federation,tyumen,RUS,tempered
+529,Rwanda,rwanda,RWA,tropical_dry
+530,San Marino,san marino,SMR,tempered
+531,Saudi Arabia,saudi arabia,SAU,tropical_dry
+532,Senegal,senegal,SEN,tropical_dry
+533,Serbia,belgrade,SRB,tempered
+534,Serbia,novi sad,SRB,tempered
+535,Serbia,serbia,SRB,tempered
+536,Serbia,zlatibor,SRB,tempered
+537,Singapore,singapore,SGP,tropical_dry
+538,Slovakia,bratislava,SVK,tempered
+539,Slovakia,kosice,SVK,tempered
+540,Slovakia,piestany,SVK,tempered
+541,Slovakia,poprad,SVK,tempered
+542,Slovakia,poprad tatry,SVK,tempered
+543,Slovakia,popradtatry,SVK,tempered
+544,Slovakia,slovak rep,SVK,tempered
+545,Slovakia,slovak republic,SVK,tempered
+546,Slovakia,slovakia,SVK,tempered
+547,Slovakia,trnava,SVK,tempered
+548,Slovenia,ljubljana,SVN,tempered
+549,Slovenia,portoroz,SVN,tempered
+550,Slovenia,slovenia,SVN,tempered
+551,South Africa,johannesburg,ZAF,tropical_dry
+552,South Africa,pretoria,ZAF,tropical_dry
+553,South Africa,south africa,ZAF,tropical_dry
+554,Spain,alicante,ESP,tempered
+555,Spain,bakio,ESP,tempered
+556,Spain,barcelona,ESP,tempered
+557,Spain,benicarlo,ESP,tempered
+558,Spain,denia,ESP,tempered
+559,Spain,donostia san sebastian,ESP,tempered
+560,Spain,gandia,ESP,tempered
+561,Spain,getafe madrid,ESP,tempered
+562,Spain,getxo,ESP,tempered
+563,Spain,huelva,ESP,tempered
+564,Spain,las palmas gran canaria,ESP,tempered
+565,Spain,madrid,ESP,tempered
+566,Spain,madrid masters,ESP,tempered
+567,Spain,majadahonda,ESP,tempered
+568,Spain,mallorca,ESP,tempered
+569,Spain,manacor,ESP,tempered
+570,Spain,marbella,ESP,tempered
+571,Spain,martos,ESP,tempered
+572,Spain,melilla,ESP,tempered
+573,Spain,murcia,ESP,tempered
+574,Spain,nules,ESP,tempered
+575,Spain,oviedo,ESP,tempered
+576,Spain,palma del rio,ESP,tempered
+577,Spain,pozoblanco,ESP,tempered
+578,Spain,reus,ESP,tempered
+579,Spain,ribaroja turia,ESP,tempered
+580,Spain,sabadell,ESP,tempered
+581,Spain,san sebastian,ESP,tempered
+582,Spain,santa cruz sierra,ESP,tempered
+583,Spain,santander,ESP,tempered
+584,Spain,segovia,ESP,tempered
+585,Spain,sevilla,ESP,tempered
+586,Spain,seville,ESP,tempered
+587,Spain,spain,ESP,tempered
+588,Spain,spain lanzarote,ESP,tempered
+589,Spain,spain tenerife,ESP,tempered
+590,Spain,tarragona,ESP,tempered
+591,Spain,telde gran canaria,ESP,tempered
+592,Spain,valencia,ESP,tempered
+593,Spain,valldoreix,ESP,tempered
+594,Spain,vigo,ESP,tempered
+595,Spain,villena,ESP,tempered
+596,Spain,xativa,ESP,tempered
+597,Sri Lanka,sri lanka,LKA,tropical_dry
+598,Sudan,sudan,SDN,tropical_dry
+599,Sweden,bastad,SWE,tempered
+600,Sweden,falun,SWE,tempered
+601,Sweden,jonkoping,SWE,tempered
+602,Sweden,kalmar,SWE,tempered
+603,Sweden,karlskrona,SWE,tempered
+604,Sweden,stockholm,SWE,tempered
+605,Sweden,sweden,SWE,tempered
+606,Sweden,ystad,SWE,tempered
+607,Switzerland,basel,CHE,tempered
+608,Switzerland,geneva,CHE,tempered
+609,Switzerland,gstaad,CHE,tempered
+610,Switzerland,horgen,CHE,tempered
+611,Switzerland,lugano,CHE,tempered
+612,Switzerland,oberentfelden,CHE,tempered
+613,Switzerland,schlieren,CHE,tempered
+614,Switzerland,switzerland,CHE,tempered
+615,"Taiwan, Province of China",chinese taipei,TWN,tropical_dry
+616,"Taiwan, Province of China",kaohsiung,TWN,tropical_dry
+617,"Taiwan, Province of China",taipei,TWN,tropical_dry
+618,Thailand,bangkok,THA,tropical_dry
+619,Thailand,hua hin,THA,tropical_dry
+620,Thailand,nonthaburi,THA,tropical_dry
+621,Thailand,thailand,THA,tropical_dry
+622,Togo,togo,TGO,tropical_dry
+623,Tunisia,monastir,TUN,tropical_dry
+624,Tunisia,tabarka,TUN,tropical_dry
+625,Tunisia,tunis,TUN,tropical_dry
+626,Tunisia,tunisia,TUN,tropical_dry
+627,Turkey,agri,TUR,tempered
+628,Turkey,antalya,TUR,tempered
+629,Turkey,batman,TUR,tempered
+630,Turkey,eskisehir,TUR,tempered
+631,Turkey,istanbul,TUR,tempered
+632,Turkey,izmir,TUR,tempered
+633,Turkey,mersin,TUR,tempered
+634,Turkey,turkey,TUR,tempered
+635,Uganda,kampala,UGA,tropical_dry
+636,Uganda,uganda,UGA,tropical_dry
+637,Ukraine,chornomorsk,UKR,tempered
+638,Ukraine,irpin,UKR,tempered
+639,Ukraine,ukraine,UKR,tempered
+640,United Arab Emirates,dubai,ARE,tropical_dry
+641,United Arab Emirates,united arab emirates,ARE,tropical_dry
+642,United Kingdom,barnstaple,GBR,tempered
+643,United Kingdom,bath,GBR,tempered
+644,United Kingdom,bolton,GBR,tempered
+645,United Kingdom,chiswick,GBR,tempered
+646,United Kingdom,eastbourne,GBR,tempered
+647,United Kingdom,glasgow,GBR,tempered
+648,United Kingdom,great britain,GBR,tempered
+649,United Kingdom,great britain future,GBR,tempered
+650,United Kingdom,ilkley,GBR,tempered
+651,United Kingdom,london,GBR,tempered
+652,United Kingdom,london olympics,GBR,tempered
+653,United Kingdom,loughborough,GBR,tempered
+654,United Kingdom,manchester,GBR,tempered
+655,United Kingdom,nottingham,GBR,tempered
+656,United Kingdom,queens club,GBR,tempered
+657,United Kingdom,roehampton,GBR,tempered
+658,United Kingdom,shrewsbury,GBR,tempered
+659,United Kingdom,sunderland,GBR,tempered
+660,United Kingdom,surbiton,GBR,tempered
+661,United Kingdom,tour finals,GBR,tempered
+662,United Kingdom,weston,GBR,tempered
+663,United Kingdom,wimbledon,GBR,tempered
+664,United States,aptos,USA,tempered
+665,United States,arcadia,USA,tempered
+666,United States,atlanta,USA,tempered
+667,United States,austin,USA,tempered
+668,United States,bakersfield,USA,tempered
+669,United States,baton rouge,USA,tempered
+670,United States,binghamton,USA,tempered
+671,United States,bradenton,USA,tempered
+672,United States,calabasas,USA,tempered
+673,United States,carson,USA,tempered
+674,United States,cary,USA,tempered
+675,United States,champaign,USA,tempered
+676,United States,champaignurbana,USA,tempered
+677,United States,charlottesville,USA,tempered
+678,United States,chicago,USA,tempered
+679,United States,cincinnati masters,USA,tempered
+680,United States,claremont,USA,tempered
+681,United States,cleveland,USA,tempered
+682,United States,columbus,USA,tempered
+683,United States,dallas,USA,tempered
+684,United States,decatur,USA,tempered
+685,United States,delray beach,USA,tempered
+686,United States,east lansing,USA,tempered
+687,United States,edwardsville,USA,tempered
+688,United States,fairfield,USA,tempered
+689,United States,fayetteville,USA,tempered
+690,United States,fort worth,USA,tempered
+691,United States,guam,USA,tempered
+692,United States,harlingen,USA,tempered
+693,United States,honolulu,USA,tempered
+694,United States,houston,USA,tempered
+695,United States,houstontx,USA,tempered
+696,United States,indian wells,USA,tempered
+697,United States,indian wells masters,USA,tempered
+698,United States,iowa city,USA,tempered
+699,United States,irving,USA,tempered
+700,United States,knoxville,USA,tempered
+701,United States,lahaina,USA,tempered
+702,United States,las vegas,USA,tempered
+703,United States,leon,USA,tempered
+704,United States,lexington,USA,tempered
+705,United States,little rock,USA,tempered
+706,United States,los angeles,USA,tempered
+707,United States,malibu,USA,tempered
+708,United States,maui,USA,tempered
+709,United States,memphis,USA,tempered
+710,United States,miami masters,USA,tempered
+711,United States,napa,USA,tempered
+712,United States,new haven,USA,tempered
+713,United States,new york,USA,tempered
+714,United States,newport,USA,tempered
+715,United States,newport beach,USA,tempered
+716,United States,norman,USA,tempered
+717,United States,ojai,USA,tempered
+718,United States,orange park,USA,tempered
+719,United States,orlando,USA,tempered
+720,United States,palm coast,USA,tempered
+721,United States,paris masters,USA,tempered
+722,United States,pensacola,USA,tempered
+723,United States,phoenix,USA,tempered
+724,United States,pittsburgh,USA,tempered
+725,United States,puerto rico,USA,tempered
+726,United States,rochester,USA,tempered
+727,United States,sacramento,USA,tempered
+728,United States,salinas,USA,tempered
+729,United States,san francisco,USA,tempered
+730,United States,san jose,USA,tempered
+731,United States,san juan,USA,tempered
+732,United States,sarasota,USA,tempered
+733,United States,savannah,USA,tempered
+734,United States,stockton,USA,tempered
+735,United States,sunrise,USA,tempered
+736,United States,tallahassee,USA,tempered
+737,United States,tempe,USA,tempered
+738,United States,tucson,USA,tempered
+739,United States,tulsa,USA,tempered
+740,United States,usa,USA,tempered
+741,United States,usa fa,USA,tempered
+742,United States,usa fb,USA,tempered
+743,United States,vale lobo,USA,tempered
+744,United States,vero beach,USA,tempered
+745,United States,waco,USA,tempered
+746,United States,washington,USA,tempered
+747,United States,west lakes,USA,tempered
+748,United States,wichita,USA,tempered
+749,United States,winnetka,USA,tempered
+750,United States,winston salem,USA,tempered
+751,United States,winstonsalem,USA,tempered
+752,Uruguay,maldonado,URY,tropical_dry
+753,Uruguay,montevideo,URY,tropical_dry
+754,Uruguay,punta del este,URY,tropical_dry
+755,Uruguay,uruguay,URY,tropical_dry
+756,Uzbekistan,andijan,UZB,tropical_dry
+757,Uzbekistan,bukhara,UZB,tropical_dry
+758,Uzbekistan,fergana,UZB,tropical_dry
+759,Uzbekistan,karshi,UZB,tropical_dry
+760,Uzbekistan,namangan,UZB,tropical_dry
+761,Uzbekistan,samarkand,UZB,tropical_dry
+762,Uzbekistan,tashkent,UZB,tropical_dry
+763,Uzbekistan,uzbekistan,UZB,tropical_dry
+764,"Venezuela, Bolivarian Republic of",venezuela,VEN,tropical_dry
+765,Viet Nam,chi minh,VNM,tropical_dry
+766,Viet Nam,chi minh city,VNM,tropical_dry
+767,Viet Nam,copy vietnam,VNM,tropical_dry
+768,Viet Nam,tay ninh,VNM,tropical_dry
+769,Viet Nam,vietnam,VNM,tropical_dry
+770,Zimbabwe,harare,ZWE,tropical_dry
+771,Zimbabwe,zimbabwe,ZWE,tropical_dry

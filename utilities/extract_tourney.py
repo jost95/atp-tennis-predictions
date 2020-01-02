@@ -106,7 +106,7 @@ def get_climate():
             from_countries.append(country)
             to_climates.append(climate['climate'])
 
-    tourney_info.country_name.replace(from_countries, to_climates, inplace=True)
+    tourney_info.climate.replace(from_countries, to_climates, inplace=True)
     tourney_info.to_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'))
 
 

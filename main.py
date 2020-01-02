@@ -22,7 +22,7 @@ stats_years = config['stats_year']
 proc_years = config['proc_year']
 
 # Create new statistical data to be used for training
-if config['generate_statistics']:
+if config['generate_stats']:
     generate_match_statistics(stats_filepath, t_weights, base_weight, stats_years, proc_years)
 
 # Generate new training data to be evaluated
