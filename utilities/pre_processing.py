@@ -25,6 +25,7 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     rankings = h.load_rankings()
 
     # Load raw_matches and sport by date
+    print('Loading raw matches...')
     raw_matches = h.load_matches(proc_years)
     raw_matches.sort_values(by=['tourney_date'], inplace=True, ascending=True)
 
@@ -37,6 +38,8 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
 
     current_tourney_date = raw_matches.iloc[0].tourney_date
     date_limit = current_tourney_date - pd.DateOffset(months=1)
+
+    print('Loading recent matches...')
     recent_matches = h.load_matches(recent_years)
     recent_matches = recent_matches.loc[recent_matches.tourney_date > date_limit]
 
@@ -57,10 +60,6 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     # Generate training matrix and update statistics matrices
     # Loop unavoidable
     for raw_match in raw_matches.itertuples():
-        if i < 92000:
-            i += 1
-            continue
-
         match = matches.iloc[i].copy()
         winner_id = raw_match.winner_id
         loser_id = raw_match.loser_id
@@ -125,7 +124,7 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         tourney_id = raw_match.tourney_id
         match_num = raw_match.match_num
         rel_tourney_games = h.get_tourney_games(winner_id, loser_id, recent_matches, tourney_id, match_num)
-        match.rel_tourney_games = rel_tourney_games
+        match.rel_tourney_games = round(base_weight * rel_tourney_games)
 
         # 10. Winner is always winner
         match.outcome = 1
@@ -133,12 +132,14 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         # Create a balanced set with equal outcomes
         if i % 2 == 0:
             try:
+                # An error here occured once and I am not sure why
                 match = -match
             except TypeError:
                 print(match)
 
         # 11. Set date after balancing set
-        match.date = tourney_date
+        # Set the date as unix time so the store is more efficient (integer)
+        match.date = int(tourney_date.timestamp())
 
         # Update entry
         matches.iloc[i] = match
