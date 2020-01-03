@@ -57,6 +57,10 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     # Generate training matrix and update statistics matrices
     # Loop unavoidable
     for raw_match in raw_matches.itertuples():
+        if i < 92000:
+            i += 1
+            continue
+
         match = matches.iloc[i].copy()
         winner_id = raw_match.winner_id
         loser_id = raw_match.loser_id
@@ -128,7 +132,10 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
 
         # Create a balanced set with equal outcomes
         if i % 2 == 0:
-            match = -match
+            try:
+                match = -match
+            except TypeError:
+                print(match)
 
         # 11. Set date after balancing set
         match.date = tourney_date

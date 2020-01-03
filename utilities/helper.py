@@ -153,7 +153,7 @@ def get_score(score):
 
 def print_progress(i, no_matches):
     # Prints the process
-    if i % 10000 == 0:
+    if i % 1000 == 0:
         print(i, 'matches (' + str(round(i / no_matches * 100, 2)) + '%) processed')
 
 
