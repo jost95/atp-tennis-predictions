@@ -1,5 +1,14 @@
 {
   "base_weight": 100,
+  "tourney_levels": {
+    "S": 0,
+    "C": 1,
+    "A": 2,
+    "M": 3,
+    "D": 4,
+    "G": 5,
+    "F": 6
+  },
   "tourney_weights": {
     "S": 0.125,
     "C": 0.25,
@@ -18,7 +27,17 @@
     "to": 2019
   },
   "generate_stats": false,
-  "generate_training": true,
+  "generate_training": false,
+  "evaluate_features": true,
   "stats_filename": "match_statistics.h5",
-  "proc_match_filename": "processed_matches.h5"
+  "proc_match_filename": "processed_matches.h5",
+  "match_points": {
+    "S": 0,
+    "C": 0,
+    "A": 23.75,
+    "M": 15,
+    "D": 0,
+    "G": 0,
+    "F": 0
+  }
 }

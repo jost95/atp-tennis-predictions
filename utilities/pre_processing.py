@@ -4,11 +4,11 @@ import time
 import pandas as pd
 import numpy as np
 
-from definitions import RAW_PATH, GEN_PATH
+from definitions import GEN_PATH
 from utilities import helper as h
 
 
-def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight, proc_years):
+def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight, proc_years, t_levels):
     # Generates a match matrix with certain statistics for each match
     print('----- GENERATING PRE-PROCESSED MATCHES -----')
     start_time = time.time()
@@ -46,9 +46,9 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     # Load tournament details
     tourneys = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'), index_col=0)
 
-    data_columns = ['date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins', 'mutual_score',
+    data_columns = ['tourney_date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins', 'mutual_score',
                     'rank_diff', 'points_grad_diff', 'home_advantage', 'rel_climate_wins', 'rel_recent_wins',
-                    'rel_tourney_games', 'outcome']
+                    'rel_tourney_games', 'tourney_level', 'outcome']
     matches = np.zeros((len(raw_matches), len(data_columns)), dtype=np.int64)
     matches = pd.DataFrame(matches, columns=data_columns)
 
@@ -140,6 +140,8 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         # 11. Set date after balancing set
         # Set the date as unix time so the store is more efficient (integer)
         match.date = int(tourney_date.timestamp())
+
+        match.tourney_level = t_levels[raw_match.tourney_level]
 
         # Update entry
         matches.iloc[i] = match
