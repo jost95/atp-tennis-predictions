@@ -37,7 +37,7 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     }
 
     current_tourney_date = raw_matches.iloc[0].tourney_date
-    date_limit = current_tourney_date - pd.DateOffset(months=1)
+    date_limit = current_tourney_date - pd.DateOffset(months=3)
 
     print('Loading recent matches...')
     recent_matches = h.load_matches(recent_years)
@@ -46,9 +46,9 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     # Load tournament details
     tourneys = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'), index_col=0)
 
-    data_columns = ['tourney_date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins', 'mutual_score',
-                    'rank_diff', 'points_grad_diff', 'home_advantage', 'rel_climate_wins', 'rel_recent_wins',
-                    'rel_tourney_games', 'tourney_level', 'outcome']
+    data_columns = ['tourney_date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins',
+                    'mutual_score', 'rank_diff', 'points_grad_diff', 'home_advantage', 'rel_climate_wins',
+                    'rel_recent_wins', 'rel_tourney_games', 'tourney_level', 'outcome']
     matches = np.zeros((len(raw_matches), len(data_columns)), dtype=np.int64)
     matches = pd.DataFrame(matches, columns=data_columns)
 
