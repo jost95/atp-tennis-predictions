@@ -3,6 +3,7 @@ import os
 import time
 import pandas as pd
 import numpy as np
+from sklearn.preprocessing import StandardScaler
 
 from definitions import GEN_PATH
 from utilities import helper as h
@@ -37,17 +38,18 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     }
 
     current_tourney_date = raw_matches.iloc[0].tourney_date
-    date_limit = current_tourney_date - pd.DateOffset(months=3)
+    month_offset = 3
+    date_limit = current_tourney_date - pd.DateOffset(months=month_offset)
 
     print('Loading recent matches...')
     recent_matches = h.load_matches(recent_years)
-    recent_matches = recent_matches.loc[recent_matches.tourney_date > date_limit]
+    recent_matches = recent_matches.loc[recent_matches.tourney_date >= date_limit]
 
     # Load tournament details
     tourneys = pd.read_csv(os.path.join(GEN_PATH, 'tourneys_fixed.csv'), index_col=0)
 
     data_columns = ['tourney_date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins',
-                    'mutual_score', 'rank_diff', 'points_grad_diff', 'home_advantage', 'rel_climate_wins',
+                    'mutual_games', 'rank_diff', 'points_grad_diff', 'home_advantage', 'rel_climate_wins',
                     'rel_recent_wins', 'rel_tourney_games', 'tourney_level', 'outcome']
     matches = np.zeros((len(raw_matches), len(data_columns)), dtype=np.int64)
     matches = pd.DataFrame(matches, columns=data_columns)
@@ -78,8 +80,8 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         # Update recent matches where tournament date is strictly larger one month ago
         if tourney_date > current_tourney_date:
             current_tourney_date = tourney_date
-            date_limit = current_tourney_date - pd.DateOffset(months=1)
-            recent_matches = recent_matches.loc[recent_matches.tourney_date > date_limit]
+            date_limit = current_tourney_date - pd.DateOffset(months=month_offset)
+            recent_matches = recent_matches.loc[recent_matches.tourney_date >= date_limit]
 
         # 1. Relative total win raw_matches differences
         rel_total_wins = h.get_relative_total_wins(cond_stats, winner_id, loser_id)
@@ -124,7 +126,7 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         tourney_id = raw_match.tourney_id
         match_num = raw_match.match_num
         rel_tourney_games = h.get_tourney_games(winner_id, loser_id, recent_matches, tourney_id, match_num)
-        match.rel_tourney_games = round(base_weight * rel_tourney_games)
+        match.rel_tourney_games = rel_tourney_games
 
         # 10. Winner is always winner
         match.outcome = 1
@@ -139,7 +141,7 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
 
         # 11. Set date after balancing set
         # Set the date as unix time so the store is more efficient (integer)
-        match.date = int(tourney_date.timestamp())
+        match.tourney_date = int(tourney_date.timestamp())
 
         match.tourney_level = t_levels[raw_match.tourney_level]
 
@@ -147,7 +149,9 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         matches.iloc[i] = match
 
         # Add current match to recent matches
-        recent_matches = recent_matches.append(pd.Series(raw_match).to_frame())
+        # noinspection PyProtectedMember
+        raw_match_df = pd.DataFrame.from_records([raw_match], columns=raw_match._fields, exclude=['Index'])
+        recent_matches = recent_matches.append(pd.DataFrame(raw_match_df))
 
         # Update stats matrices
         match_d_weight = round(base_weight * time_weight)
@@ -174,7 +178,8 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         try:
             winner_games, loser_games = h.get_score(raw_match.score)
         except ValueError:
-            continue
+            winner_games = 0
+            loser_games = 0
 
         mutual_score[winner_id][loser_id] += round(base_weight * time_weight * winner_games)
         mutual_score[loser_id][winner_id] += round(base_weight * time_weight * loser_games)
@@ -185,6 +190,11 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
 
     print('All', no_matches, 'matches (100%) processed')
 
+    cols_not_scale = ['tourney_date', 'home_advantage', 'tourney_level', 'outcome']
+    matches_not_scale = matches.filter(cols_not_scale, axis=1)
+    matches_scale = matches.drop(cols_not_scale, axis=1)
+    matches_scale[matches_scale.columns] = StandardScaler().fit_transform(matches_scale[matches_scale.columns])
+    matches = matches_scale.join(matches_not_scale)
     matches.to_hdf(proc_match_filepath, key='matches', mode='w')
 
     print('Pre-processed H5 matches saved')

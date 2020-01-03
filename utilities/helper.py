@@ -173,37 +173,23 @@ def load_rankings():
 def get_tourney_games(winner_id, loser_id, recent_matches, tourney_id, match_num):
     # Get recent performance in relative number of games IN CURRENT tournament
     games_won_winner = 0
-    gammes_played_winner = 0
     games_won_loser = 0
-    games_played_loser = 0
 
     for match in recent_matches.itertuples():
         if match.tourney_id == tourney_id and match.match_num < match_num:
-            winner_games, loser_games = get_score(match.score)
+            try:
+                winner_games, loser_games = get_score(match.score)
+            except ValueError:
+                winner_games = 0
+                loser_games = 0
 
-            if match.winner_id == winner_id:
+            # Note that I am accounting for round robin match types here, e.g. ATP finals
+            if match.winner_id == winner_id or match.loser_id == winner_id:
                 games_won_winner += winner_games
-                gammes_played_winner += winner_games
-            elif match.winner_id == loser_id:
+            elif match.winner_id == loser_id or match.loser_id == loser_id:
                 games_won_loser += loser_games
-                games_played_loser += loser_games
 
-            if match.loser_id == winner_id:
-                gammes_played_winner += loser_games
-            elif match.loser_id == loser_id:
-                games_played_loser += loser_games
-
-    if gammes_played_winner == 0:
-        rel_wins_winner = 0
-    else:
-        rel_wins_winner = games_won_winner / gammes_played_winner
-
-    if games_played_loser == 0:
-        rel_wins_loser = 0
-    else:
-        rel_wins_loser = games_won_loser / games_played_loser
-
-    return rel_wins_winner - rel_wins_loser
+    return games_won_winner - games_won_loser
 
 
 def get_recent_performance(winner_id, loser_id, recent_matches, tourney_id):

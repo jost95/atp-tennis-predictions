@@ -24,11 +24,10 @@
   },
   "proc_year": {
     "from": 2015,
-    "to": 2019
+    "to": 2015
   },
   "generate_stats": false,
-  "generate_training": false,
-  "evaluate_features": true,
+  "generate_training": true,
   "stats_filename": "match_statistics.h5",
   "proc_match_filename": "processed_matches.h5",
   "match_points": {

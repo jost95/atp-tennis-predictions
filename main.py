@@ -2,7 +2,7 @@ import json
 import os
 
 from definitions import GEN_PATH, ROOT_DIR
-from statistics import generate_match_statistics
+from stats import generate_match_statistics
 from pre_processing import process_matches
 
 # Read configuration file

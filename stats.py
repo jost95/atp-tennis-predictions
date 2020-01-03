@@ -93,7 +93,8 @@ def generate_match_statistics(filepath, t_weights, base_weight, stats_years, pro
             try:
                 winner_games, loser_games = h.get_score(match.score)
             except ValueError:
-                continue
+                winner_games = 0
+                loser_games = 0
 
             mutual_score[winner_id][loser_id] += round(base_weight * time_weight * winner_games)
             mutual_score[loser_id][winner_id] += round(base_weight * time_weight * loser_games)
