@@ -61,10 +61,6 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     # Generate training matrix and update statistics matrices
     # Loop unavoidable
     for raw_match in raw_matches.itertuples():
-        if i < 119310:
-            i += 1
-            continue
-
         match = matches.iloc[i].copy()
         winner_id = raw_match.winner_id
         loser_id = raw_match.loser_id
