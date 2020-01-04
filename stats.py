@@ -47,7 +47,7 @@ def generate_match_statistics(filepath, t_weights, base_weight, stats_years, pro
     for match in matches.itertuples():
         winner_id = match.winner_id
         loser_id = match.loser_id
-        time_weight = h.get_time_weight(stats_years['to'], match.tourney_date)
+        time_weight = h.get_time_weight(match.tourney_date)
         surface = h.get_surface(match.surface)
         location = h.filter_tourney_name(match.tourney_name)
         climate = tourneys.loc[tourneys.location == location, 'climate']

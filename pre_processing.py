@@ -1,4 +1,3 @@
-import datetime
 import os
 import time
 import pandas as pd
@@ -50,7 +49,7 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
 
     data_columns = ['tourney_date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins',
                     'mutual_games', 'rank_diff', 'points_grad_diff', 'home_advantage', 'rel_climate_wins',
-                    'rel_recent_wins', 'rel_tourney_games', 'tourney_level', 'outcome']
+                    'rel_recent_wins', 'rel_tourney_games', 'tourney_level', 'player_1', 'player_2', 'outcome']
     matches = np.zeros((len(raw_matches), len(data_columns)), dtype=np.int64)
     matches = pd.DataFrame(matches, columns=data_columns)
 
@@ -62,11 +61,15 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
     # Generate training matrix and update statistics matrices
     # Loop unavoidable
     for raw_match in raw_matches.itertuples():
+        if i < 119310:
+            i += 1
+            continue
+
         match = matches.iloc[i].copy()
         winner_id = raw_match.winner_id
         loser_id = raw_match.loser_id
         tourney_date = raw_match.tourney_date
-        time_weight = h.get_time_weight(proc_years['from'], tourney_date, sign=-1)
+        time_weight = h.get_time_weight(tourney_date)
         surface = h.get_surface(raw_match.surface)
         location = h.filter_tourney_name(raw_match.tourney_name)
         climate = tourneys.loc[tourneys.location == location, 'climate']
@@ -139,10 +142,11 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
             except TypeError:
                 print(match)
 
-        # 11. Set date after balancing set
+        # 11. Set non numeric stuff after balancing set
         # Set the date as unix time so the store is more efficient (integer)
         match.tourney_date = int(tourney_date.timestamp())
-
+        match.player_1 = winner_id
+        match.player_2 = loser_id
         match.tourney_level = t_levels[raw_match.tourney_level]
 
         # Update entry
@@ -190,7 +194,7 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
 
     print('All', no_matches, 'matches (100%) processed')
 
-    cols_not_scale = ['tourney_date', 'home_advantage', 'tourney_level', 'outcome']
+    cols_not_scale = ['tourney_date', 'home_advantage', 'tourney_level', 'player_1', 'player_2', 'outcome']
     matches_not_scale = matches.filter(cols_not_scale, axis=1)
     matches_scale = matches.drop(cols_not_scale, axis=1)
     matches_scale[matches_scale.columns] = StandardScaler().fit_transform(matches_scale[matches_scale.columns])

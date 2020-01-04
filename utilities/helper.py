@@ -112,11 +112,10 @@ def load_matches(years, player_ids=None):
     return matches
 
 
-def get_time_weight(base_year, current_date, sign=1):
-    # Return an exponential weighted time decay
-    # Pay attention to value of sign
-    time_delta = (datetime.date(base_year + 1, 1, 1) - current_date.date()).days
-    return np.exp(-sign * time_delta / (365 * 3))
+def get_time_weight(current_date):
+    # Return an exponential weighted time decay, base year is 2019
+    time_delta = (datetime.date(2019, 1, 1) - current_date.date()).days
+    return np.exp(-time_delta / (365 * 5))
 
 
 def get_surface(surface):
