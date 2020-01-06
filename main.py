@@ -14,6 +14,7 @@ proc_match_filepath = os.path.join(GEN_PATH, config['proc_match_filename'])
 base_weight = config['base_weight']
 t_weights = config['tourney_weights']
 t_levels = config['tourney_levels']
+surfaces = config['surfaces']
 stats_years = config['stats_year']
 proc_years = config['proc_year']
 
@@ -25,4 +26,4 @@ if config['generate_stats']:
 # FEATURE ENGINEERING
 # - generate new features to be evaluated
 if config['generate_training']:
-    process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight, proc_years, t_levels)
+    process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight, proc_years, t_levels, surfaces)

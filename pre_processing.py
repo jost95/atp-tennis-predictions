@@ -8,7 +8,7 @@ from definitions import GEN_PATH
 from utilities import helper as h
 
 
-def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight, proc_years, t_levels):
+def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight, proc_years, t_levels, surfaces):
     # Generates a match matrix with certain statistics for each match
     print('----- GENERATING PRE-PROCESSED MATCHES -----')
     start_time = time.time()
@@ -49,7 +49,8 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
 
     data_columns = ['tourney_date', 'rel_total_wins', 'rel_surface_wins', 'mutual_wins', 'mutual_surface_wins',
                     'mutual_games', 'rank_diff', 'points_grad_diff', 'home_advantage', 'rel_climate_wins',
-                    'rel_recent_wins', 'rel_tourney_games', 'tourney_level', 'player_1', 'player_2', 'outcome']
+                    'rel_recent_wins', 'rel_tourney_games', 'tourney_level', 'player_1', 'player_2', 'surface',
+                    'age_diff', 'outcome']
     matches = np.zeros((len(raw_matches), len(data_columns)), dtype=np.int64)
     matches = pd.DataFrame(matches, columns=data_columns)
 
@@ -127,7 +128,10 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
         rel_tourney_games = h.get_tourney_games(winner_id, loser_id, recent_matches, tourney_id, match_num)
         match.rel_tourney_games = rel_tourney_games
 
-        # 10. Winner is always winner
+        # 10. Set age difference
+        match.age_diff = raw_match.winner_age - raw_match.loser_age
+
+        # 11. Winner is always winner
         match.outcome = 1
 
         # Create a balanced set with equal outcomes
@@ -138,12 +142,13 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
             except TypeError:
                 print(match)
 
-        # 11. Set non numeric stuff after balancing set
+        # 12. Set non numeric stuff after balancing set
         # Set the date as unix time so the store is more efficient (integer)
         match.tourney_date = int(tourney_date.timestamp())
         match.player_1 = winner_id
         match.player_2 = loser_id
         match.tourney_level = t_levels[raw_match.tourney_level]
+        match.surface = surfaces[surface]
 
         # Update entry
         matches.iloc[i] = match
@@ -190,7 +195,7 @@ def process_matches(stats_filepath, proc_match_filepath, t_weights, base_weight,
 
     print('All', no_matches, 'matches (100%) processed')
 
-    cols_not_scale = ['tourney_date', 'home_advantage', 'tourney_level', 'player_1', 'player_2', 'outcome']
+    cols_not_scale = ['tourney_date', 'home_advantage', 'tourney_level', 'player_1', 'player_2', 'surface', 'outcome']
     matches_not_scale = matches.filter(cols_not_scale, axis=1)
     matches_scale = matches.drop(cols_not_scale, axis=1)
     matches_scale[matches_scale.columns] = StandardScaler().fit_transform(matches_scale[matches_scale.columns])

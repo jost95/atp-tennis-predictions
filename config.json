@@ -1,5 +1,10 @@
 {
   "base_weight": 100,
+  "surfaces": {
+    "clay": 0,
+    "grass": 1,
+    "hard": 2
+  },
   "tourney_levels": {
     "S": 0,
     "C": 1,

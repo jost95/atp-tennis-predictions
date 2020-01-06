@@ -29,9 +29,8 @@ def generate_match_statistics(filepath, t_weights, base_weight, stats_years, pro
 
     # Create general perfomance matrix
     cond_cat = ['total_wins', 'total_losses', 'surface_clay_wins', 'surface_clay_losses', 'surface_grass_wins',
-                'surface_grass_losses', 'surface_hard_wins', 'surface_hard_losses', 'surface_carpet_wins',
-                'surface_carpet_losses', 'climate_tropical_dry_wins', 'climate_tropical_dry_losses',
-                'climate_tempered_wins', 'climate_tempered_losses']
+                'surface_grass_losses', 'surface_hard_wins', 'surface_hard_losses', 'climate_tropical_dry_wins',
+                'climate_tropical_dry_losses', 'climate_tempered_wins', 'climate_tempered_losses']
     cond_stats = np.zeros((no_players, len(cond_cat)), dtype=np.int64)
     cond_stats = pd.DataFrame(cond_stats, player_ids, cond_cat)
 

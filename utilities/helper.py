@@ -103,7 +103,7 @@ def load_matches(years, player_ids=None):
     # Drop not relevant columns
     matches = matches.filter(
         ['tourney_name', 'winner_id', 'winner_ioc', 'loser_id', 'loser_ioc', 'tourney_date', 'tourney_level',
-         'surface', 'score', 'match_num', 'tourney_id'])
+         'surface', 'score', 'match_num', 'tourney_id', 'winner_age', 'loser_age'])
 
     # Sort by date (oldest ranking first)
     matches.sort_values(by=['tourney_date', 'match_num'], inplace=True, ascending=True)
@@ -121,7 +121,7 @@ def get_time_weight(current_date):
 def get_surface(surface):
     # Guesses the surface as hard if specified is not known
     surface = str(surface).lower()
-    return 'hard' if surface == 'nan' or surface == 'none' else surface
+    return 'hard' if surface == 'nan' or surface == 'none' or surface == 'carpet' else surface
 
 
 def get_score(score):
