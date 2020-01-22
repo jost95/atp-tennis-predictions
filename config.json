@@ -36,6 +36,7 @@
   "stats_filename": "match_statistics.h5",
   "proc_match_filename": "processed_matches.h5",
   "proc_match_filename_final": "processed_matches_FINAL.h5",
+  "odds_filename": "odds_matches.h5",
   "match_points": {
     "S": 0,
     "C": 0,

@@ -1,10 +1,29 @@
 # Helper functions
-import datetime
+import datetime as dt
 import pandas as pd
 import numpy as np
 import os
 import re
 from definitions import RAW_PATH
+
+# Timing logger for dataframe operations
+def logger(f):
+    def wrapper(df, *args, **kwargs):
+        start = dt.datetime.now()
+        result = f(df, *args, **kwargs)
+        end = dt.datetime.now()
+        
+        if isinstance(result, tuple):
+            shape = ''
+            
+            for r in result:
+                shape += str(r.shape)
+        else:
+            shape = result.shape
+        
+        print(f"{f.__name__} took={end - start} shape={shape}")
+        return result
+    return wrapper
 
 
 def get_home_advantage(winner_ioc, loser_ioc, tourneys, tourney_name):
@@ -114,7 +133,7 @@ def load_matches(years, player_ids=None):
 
 def get_time_weight(current_date):
     # Return an exponential weighted time decay, base year is 2019
-    time_delta = (datetime.date(2019, 1, 1) - current_date.date()).days
+    time_delta = (dt.date(2019, 1, 1) - current_date.date()).days
     return np.exp(-time_delta / (365 * 5))
 
 
