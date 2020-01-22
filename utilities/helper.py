@@ -170,9 +170,11 @@ def load_rankings():
 
 
 def get_tourney_games(winner_id, loser_id, recent_matches, tourney_id, match_num):
-    # Get recent performance in relative number of games IN CURRENT tournament
-    games_won_winner = 0
-    games_won_loser = 0
+    # Get recent performance in relative number of games diff IN CURRENT tournament
+    diff_games_winner = 0
+    no_matches_winner = 0
+    diff_games_loser = 0
+    no_matches_loser = 0
 
     for match in recent_matches.itertuples():
         if match.tourney_id == tourney_id and match.match_num < match_num:
@@ -182,13 +184,33 @@ def get_tourney_games(winner_id, loser_id, recent_matches, tourney_id, match_num
                 winner_games = 0
                 loser_games = 0
 
-            # Note that I am accounting for round robin match types here, e.g. ATP finals
-            if match.winner_id == winner_id or match.loser_id == winner_id:
-                games_won_winner += winner_games
-            elif match.winner_id == loser_id or match.loser_id == loser_id:
-                games_won_loser += loser_games
+            diff_score = winner_games - loser_games
 
-    return games_won_winner - games_won_loser
+            # Note that I am accounting for round robin match types here, e.g. ATP finals
+            if match.winner_id == winner_id:
+                diff_games_winner += diff_score
+                no_matches_winner += 1
+            elif match.loser_id == winner_id:
+                diff_games_winner -= diff_score
+                no_matches_winner += 1
+
+            if match.winner_id == loser_id:
+                diff_games_loser += diff_score
+                no_matches_loser += 1
+            elif match.loser_id == loser_id:
+                diff_games_loser -= diff_score
+                no_matches_loser += 1
+
+    avg_diff_winner = 0
+    avg_diff_loser = 0
+
+    if no_matches_winner > 0:
+        avg_diff_winner = diff_games_winner / no_matches_winner
+
+    if no_matches_loser > 0:
+        avg_diff_loser = diff_games_loser / no_matches_loser
+
+    return avg_diff_winner - avg_diff_loser
 
 
 def get_recent_performance(winner_id, loser_id, recent_matches, tourney_id):
