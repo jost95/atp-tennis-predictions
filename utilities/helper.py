@@ -6,23 +6,25 @@ import os
 import re
 from definitions import RAW_PATH
 
+
 # Timing logger for dataframe operations
 def logger(f):
     def wrapper(df, *args, **kwargs):
         start = dt.datetime.now()
         result = f(df, *args, **kwargs)
         end = dt.datetime.now()
-        
+
         if isinstance(result, tuple):
             shape = ''
-            
+
             for r in result:
                 shape += str(r.shape)
         else:
             shape = result.shape
-        
+
         print(f"{f.__name__} took={end - start} shape={shape}")
         return result
+
     return wrapper
 
 
@@ -144,29 +146,18 @@ def get_surface(surface):
 
 
 def get_score(score):
-    # Extracts the score in games from the score string
-    score = str(score)
+    games_w = 0
+    games_l = 0
 
-    # Continue if score is not known
-    if score == 'nan':
-        return 0, 0
+    try:
+        for m in re.finditer('-', score):
+            i = m.start()
+            games_w += int(score[i - 1])
+            games_l += int(score[i + 1])
+    except ValueError:
+        print(score)
 
-    sets = score.split()
-    winner_games = 0
-    loser_games = 0
-
-    for s in sets:
-        # Remove weird scoring
-        games = ''.join(c for c in s if c not in '[]RET').split('-')
-
-        if len(games) == 1:
-            continue
-
-        # This might cause trouble if score not properly formatted
-        winner_games += int(games[0][0])
-        loser_games += int(games[1][0])
-
-    return winner_games, loser_games
+    return games_w, games_l
 
 
 def print_progress(i, no_matches):
